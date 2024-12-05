@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-b&85mb+cm@(h)c5r6bo9nd*c&5esc6sh&pwgv_m8d=8pa#o*^p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-adamshaw90-tripeasy-ixxqjrvi5au.ws.codeinstitute-ide.net']
 
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'booking',
+    '.herokuapp.com',
+
 ]
 
 MIDDLEWARE = [

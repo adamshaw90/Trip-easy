@@ -9,3 +9,16 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+class Itinerary(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    start_date = models.DateField()
+    end_date = models.DateField()
+    duration = models.CharField(max_length=50)
+    max_participants = models.PositiveIntegerField()
+    image = models.ImageField(upload_to='itineraries/', blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name

@@ -4,8 +4,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .models import Itinerary, Booking
-from .forms import SignUpForm, ProfileForm, ItineraryForm, BookingForm
+from .models import Itinerary, Booking, Review
+from .forms import SignUpForm, ProfileForm, ItineraryForm, BookingForm, ReviewForm
 
 def home(request):
     itineraries = Itinerary.objects.all()
@@ -135,18 +135,27 @@ def book_itinerary(request, pk):
         form = BookingForm()
     return render(request, 'booking/booking_form.html', {'form': form, 'itinerary': itinerary})
 
-@login_required
-def add_review(request, pk):
+def itinerary_detail(request, pk):
     itinerary = get_object_or_404(Itinerary, pk=pk)
-    if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.user = request.user
-            review.itinerary = itinerary
-            review.save()
-            messages.success(request, "Review submitted successfully.")
-            return redirect('itinerary_detail', pk=pk)
+    reviews = Review.objects.filter(itinerary=itinerary).order_by('-created_at')
+
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.user = request.user
+                review.itinerary = itinerary
+                review.save()
+                messages.success(request, "Review submitted successfully.")
+                return redirect('itinerary_detail', pk=pk)
+        else:
+            form = ReviewForm()
     else:
-        form = ReviewForm()
-    return render(request, 'booking/add_review.html', {'form': form, 'itinerary': itinerary})
+        form = None
+
+    return render(request, 'booking/itinerary_detail.html', {
+        'itinerary': itinerary,
+        'reviews': reviews,
+        'review_form': form
+    })

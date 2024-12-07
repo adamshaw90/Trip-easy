@@ -16,5 +16,5 @@ urlpatterns = [
     path('itineraries/<int:pk>/update/', views.itinerary_update, name='itinerary_update'),
     path('itineraries/<int:pk>/delete/', views.itinerary_delete, name='itinerary_delete'),
     path('itineraries/<int:pk>/book/', views.book_itinerary, name='book_itinerary'),
-    path('itineraries/<int:pk>/review/', views.add_review, name='add_review'),
+
 ]

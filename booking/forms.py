@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import Profile, Itinerary, Booking
+from .models import Profile, Itinerary, Booking, Review
 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -25,3 +25,12 @@ class BookingForm(forms.ModelForm):
         model = Booking
         fields = []
         # No fields needed, just a button to confirm booking
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'review_text']
+        widgets = {
+            'rating': forms.Select(choices=[(i, i) for i in range(1,6)]),
+            'review_text': forms.Textarea(attrs={'placeholder': 'Write your review here...'}),
+        }

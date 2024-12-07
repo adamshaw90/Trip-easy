@@ -5,14 +5,29 @@
 <p>From: {{ itinerary.start_date }} To: {{ itinerary.end_date }}</p>
 <p>Price: ${{ itinerary.price }}</p>
 
-{% if user.is_authenticated %}
-<a href="{% url 'book_itinerary' itinerary.pk %}">Book This Trip</a>
+<h3>Reviews:</h3>
+{% if reviews %}
+    {% for review in reviews %}
+    <div class="review">
+        <strong>{{ review.user.username }}</strong> rated {{ review.rating }} out of 5
+        <p>{{ review.review_text }}</p>
+        <small>Posted on: {{ review.created_at }}</small>
+    </div>
+    {% endfor %}
 {% else %}
-<p>Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'sign_up' %}">sign up</a> to book.</p>
+    <p>No reviews yet.</p>
 {% endif %}
 
-{% if user.is_superuser %}
-<a href="{% url 'itinerary_update' itinerary.pk %}">Edit Itinerary</a> |
-<a href="{% url 'itinerary_delete' itinerary.pk %}">Delete Itinerary</a>
+{% if user.is_authenticated %}
+<h3>Leave a Review</h3>
+<form method="POST">
+    {% csrf_token %}
+    {{ review_form.as_p }}
+    <button type="submit">Submit Review</button>
+</form>
+{% else %}
+<p><a href="{% url 'login' %}">Log in</a> or <a href="{% url 'sign_up' %}">sign up</a> to leave a review.</p>
 {% endif %}
+
 {% endblock %}
+

@@ -134,3 +134,19 @@ def book_itinerary(request, pk):
     else:
         form = BookingForm()
     return render(request, 'booking/booking_form.html', {'form': form, 'itinerary': itinerary})
+
+@login_required
+def add_review(request, pk):
+    itinerary = get_object_or_404(Itinerary, pk=pk)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.itinerary = itinerary
+            review.save()
+            messages.success(request, "Review submitted successfully.")
+            return redirect('itinerary_detail', pk=pk)
+    else:
+        form = ReviewForm()
+    return render(request, 'booking/add_review.html', {'form': form, 'itinerary': itinerary})

@@ -31,3 +31,29 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name
+
+class Booking(models.Model):
+    STATUS_CHOICES = [
+        ('Confirmed', 'Confirmed'),
+        ('Cancelled', 'Cancelled'),
+        ('Pending', 'Pending'),
+    ]
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
+    itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE, related_name='bookings')
+    booking_date = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Pending')
+    notes = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"Booking by {self.user.username} for {self.itinerary.name}"
+
+class Review(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
+    itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE, related_name='reviews')
+    rating = models.PositiveIntegerField()  # Typically 1-5
+    comment = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Review by {self.user.username} for {self.itinerary.name}"

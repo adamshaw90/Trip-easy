@@ -1,59 +1,45 @@
-from django.contrib.auth.models import User
 from django.db import models
+from django.contrib.auth.models import User
 
-class UserProfile(models.Model):
+# Profile model
+class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    phone_number = models.CharField(max_length=15, blank=True, null=True)
-    preferred_language = models.CharField(max_length=50, blank=True, null=True)
+    full_name = models.CharField(max_length=255, blank=True)
+    address = models.TextField(blank=True)
+    phone_number = models.CharField(max_length=15, blank=True)
 
     def __str__(self):
         return self.user.username
        
+# Itinerary model
 class Itinerary(models.Model):
-    name = models.CharField(max_length=200)
-    description = models.TextField()
+    name = models.CharField(max_length=255)
     start_date = models.DateField()
     end_date = models.DateField()
-    duration = models.CharField(max_length=50)
-    max_participants = models.PositiveIntegerField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.name
-
-class Location(models.Model):
-    name = models.CharField(max_length=200)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
-    latitude = models.DecimalField(max_digits=9, decimal_places=6)
-    longitude = models.DecimalField(max_digits=9, decimal_places=6)
-    itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE, related_name='locations')
 
     def __str__(self):
         return self.name
 
+# Booking model
 class Booking(models.Model):
-    STATUS_CHOICES = [
-        ('Confirmed', 'Confirmed'),
-        ('Cancelled', 'Cancelled'),
-        ('Pending', 'Pending'),
-    ]
-
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
-    itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE, related_name='bookings')
-    booking_date = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Pending')
-    notes = models.TextField(blank=True, null=True)
-
-    def __str__(self):
-        return f"Booking by {self.user.username} for {self.itinerary.name}"
-
-class Review(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
-    itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE, related_name='reviews')
-    rating = models.PositiveIntegerField()  # Typically 1-5
-    comment = models.TextField(blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Review by {self.user.username} for {self.itinerary.name}"
+        return f'{self.user.username} booking for {self.itinerary.name}'
+
+# Review model
+class Review(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE)
+    rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+    review_text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.itinerary.name} review by {self.user.username}'

@@ -1,29 +1,13 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Booking, Review
+from .models import Booking, Profile
 
-# User Registration Form
-class UserRegistrationForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput, label="Password")
-
-    class Meta:
-        model = User
-        fields = ['username', 'email', 'password']
-
-# Booking Form
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['itinerary', 'notes']
-        widgets = {
-            'notes': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Add special requests or notes'}),
-        }
+        fields = ['start_date', 'end_date']
 
-# Review Form
-class ReviewForm(forms.ModelForm):
+class ProfileForm(forms.ModelForm):
     class Meta:
-        model = Review
-        fields = ['rating', 'comment']
-        widgets = {
-            'comment': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Leave your review here'}),
-        }
+        model = Profile
+        fields = ['full_name', 'address', 'phone_number']

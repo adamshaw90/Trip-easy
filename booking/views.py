@@ -1,25 +1,17 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
+from .models import Itinerary, Booking, Profile
+from .forms import BookingForm, ProfileForm
 from django.contrib import messages
-from .forms import UserRegistrationForm, BookingForm, ReviewForm
-from .models import Itinerary, Booking
 
-# User Registration View
-def register(request):
-    if request.method == 'POST':
-        form = UserRegistrationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('home')
-    else:
-        form = UserRegistrationForm()
-    return render(request, 'register.html', {'form': form})
+# View for booking an itinerary
+@login_required
+def book_itinerary(request, pk):
+    if not hasattr(request.user, 'profile'):
+        messages.error(request, 'You must complete your profile before booking an itinerary.')
+        return redirect('complete_profile')  # Redirect to the profile completion page
 
-# Booking View
-def book_itinerary(request, itinerary_id):
-    itinerary = Itinerary.objects.get(id=itinerary_id)
+    itinerary = get_object_or_404(Itinerary, pk=pk)
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -27,24 +19,40 @@ def book_itinerary(request, itinerary_id):
             booking.user = request.user
             booking.itinerary = itinerary
             booking.save()
-            messages.success(request, 'Booking successful!')
-            return redirect('itinerary_detail', itinerary_id=itinerary.id)
+            messages.success(request, 'Your booking has been confirmed!')
+            return redirect('booking_success')  # Redirect to a booking success page
     else:
         form = BookingForm()
-    return render(request, 'book_itinerary.html', {'form': form, 'itinerary': itinerary})
 
-# Review View
-def leave_review(request, itinerary_id):
-    itinerary = Itinerary.objects.get(id=itinerary_id)
+    return render(request, 'booking/book_itinerary.html', {'itinerary': itinerary, 'form': form})
+
+# View for completing the profile
+@login_required
+def complete_profile(request):
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
+        form = ProfileForm(request.POST)
         if form.is_valid():
-            review = form.save(commit=False)
-            review.user = request.user
-            review.itinerary = itinerary
-            review.save()
-            messages.success(request, 'Thank you for your review!')
-            return redirect('itinerary_detail', itinerary_id=itinerary.id)
+            profile = form.save(commit=False)
+            profile.user = request.user
+            profile.save()
+            messages.success(request, 'Your profile has been completed!')
+            return redirect('home')  # Redirect to the homepage or dashboard
     else:
-        form = ReviewForm()
-    return render(request, 'leave_review.html', {'form': form, 'itinerary': itinerary})
+        form = ProfileForm()
+
+    return render(request, 'booking/complete_profile.html', {'form': form})
+
+# View for updating the profile
+@login_required
+def update_profile(request):
+    profile = request.user.profile
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your profile has been updated!')
+            return redirect('home')  # Redirect to the homepage or dashboard
+    else:
+        form = ProfileForm(instance=profile)
+
+    return render(request, 'booking/update_profile.html', {'form': form})

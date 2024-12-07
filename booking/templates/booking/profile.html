@@ -1,0 +1,10 @@
+{% extends 'booking/base.html' %}
+{% block content %}
+<h2>Your Profile</h2>
+<p>Full Name: {{ user.profile.full_name }}</p>
+<p>Address: {{ user.profile.address }}</p>
+<p>Phone: {{ user.profile.phone_number }}</p>
+
+<a href="{% url 'profile_update' %}">Edit Profile</a> |
+<a href="{% url 'profile_delete' %}">Delete Account</a>
+{% endblock %}

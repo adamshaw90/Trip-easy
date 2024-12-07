@@ -1,10 +1,9 @@
 {% extends 'booking/base.html' %}
-
 {% block content %}
-<h2>Update Your Profile</h2>
-<form method="POST">
+<h2>Login</h2>
+<form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Update Profile</button>
+    <button type="submit">Log In</button>
 </form>
 {% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'booking/base.html' %}
+{% block content %}
+<h1>Welcome to Trip-Easy</h1>
+<p>Explore our itineraries and book your next adventure!</p>
+<div class="itinerary-list">
+    {% for itinerary in itineraries %}
+    <div class="itinerary-item">
+        <h3>{{ itinerary.name }}</h3>
+        <p>{{ itinerary.description|truncatewords:20 }}</p>
+        <p>From: {{ itinerary.start_date }} To: {{ itinerary.end_date }}</p>
+        <p>Price: ${{ itinerary.price }}</p>
+        <a href="{% url 'itinerary_detail' itinerary.pk %}">View Details</a>
+    </div>
+    {% empty %}
+    <p>No itineraries available.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'booking/base.html' %}
+{% block content %}
+<h2>Book: {{ itinerary.name }}</h2>
+<p>Price: ${{ itinerary.price }}</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Confirm Booking</button>
+</form>
+{% endblock %}

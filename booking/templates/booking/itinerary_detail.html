@@ -5,6 +5,15 @@
 <p>From: {{ itinerary.start_date }} To: {{ itinerary.end_date }}</p>
 <p>Price: ${{ itinerary.price }}</p>
 
+{% if user.is_authenticated %}
+    <a href="{% url 'book_itinerary' itinerary.pk %}" class="btn btn-primary">Book Now</a>
+{% else %}
+    <p>
+        Please <a href="{% url 'login' %}">login</a> or 
+        <a href="{% url 'sign_up' %}">sign up</a> to book this itinerary.
+    </p>
+{% endif %}
+
 <h3>Reviews:</h3>
 {% if reviews %}
     {% for review in reviews %}

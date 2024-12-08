@@ -16,5 +16,6 @@ urlpatterns = [
     path('itineraries/<int:pk>/update/', views.itinerary_update, name='itinerary_update'),
     path('itineraries/<int:pk>/delete/', views.itinerary_delete, name='itinerary_delete'),
     path('itineraries/<int:pk>/book/', views.book_itinerary, name='book_itinerary'),
+    path('booking/<int:pk>/cancel/', views.cancel_booking, name='cancel_booking'),
 
 ]

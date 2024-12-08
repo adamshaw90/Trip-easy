@@ -43,7 +43,26 @@ def logout_view(request):
 
 @login_required
 def profile_view(request):
-    return render(request, 'booking/profile.html')
+    profile = request.user.profile
+    # Fetch all bookings for the logged-in user
+    user_bookings = Booking.objects.filter(user=request.user)
+    return render(request, 'booking/profile.html', {
+        'profile': profile,
+        'user_bookings': user_bookings
+    })
+
+@login_required
+def cancel_booking(request, pk):
+    booking = get_object_or_404(Booking, pk=pk, user=request.user)
+    if request.method == 'POST':
+        booking.delete()
+        messages.success(request, "Your booking has been canceled.")
+        return redirect('profile')
+    else:
+        # Optionally show a confirmation page if you prefer, but it's not required.
+        return redirect('profile')
+
+
 
 @login_required
 def profile_update(request):

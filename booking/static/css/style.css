@@ -85,6 +85,8 @@ form button:hover {
     color: #155724;
 }
 
+
+
 /* Responsive Media Queries */
 @media (max-width: 768px) {
     .itinerary-list {

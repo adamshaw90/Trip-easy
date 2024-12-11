@@ -1,95 +1,146 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f1efec;
+    color: #283a2c;
     margin: 0;
-    background: #f0f0f0;
+    padding: 0;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-.navbar a {
-    color: #fff;
-    margin: 0 10px;
+a {
     text-decoration: none;
+    color: #283a2c;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+a:hover {
+    color: #daddc5;
 }
 
+/* Header */
+header {
+    background-color: #283a2c;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-links a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    color: #daddc5;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #daddc5;
+    color: #283a2c;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Itineraries Section */
 .container {
     max-width: 1200px;
     margin: 20px auto;
-    background: #fff;
     padding: 20px;
 }
 
-h1, h2, h3 {
-    margin-bottom: 15px;
+h2 {
+    color: #283a2c;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.itinerary-list {
-    display: flex;
-    flex-wrap: wrap;
+.itineraries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.itinerary-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    flex: 1 1 300px;
-    box-sizing: border-box;
-    border-radius: 0%;
+.card {
+    background-color: #ffffff;
+    border: 1px solid #daddc5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-form {
+.card h3 {
+    color: #283a2c;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: #283a2c;
+}
+
+.card .btn {
+    background-color: #daddc5;
+    color: #283a2c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.card .btn:hover {
+    background-color: #283a2c;
+    color: #ffffff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background-color: #283a2c;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.footer-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-form button {
-    margin-top: 10px;
-    padding: 10px;
-    background: #28a745;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+.social-links {
+    display: flex;
+    gap: 10px;
 }
 
-form button:hover {
-    background: #218838;
+.social-links a {
+    color: #ffffff;
+    font-weight: bold;
 }
 
-.messages {
-    margin-bottom: 15px;
-}
-
-.message {
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-.message.error {
-    background: #f8d7da;
-    color: #721c24;
-}
-
-.message.success {
-    background: #d4edda;
-    color: #155724;
-}
-
-
-
-/* Responsive Media Queries */
-@media (max-width: 768px) {
-    .itinerary-list {
-        flex-direction: column;
-    }
+.social-links a:hover {
+    color: #daddc5;
 }

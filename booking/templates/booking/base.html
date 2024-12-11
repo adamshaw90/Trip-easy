@@ -9,20 +9,28 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<header>
-    <nav class="navbar">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'itineraries' %}">Itineraries</a>
-        {% if user.is_authenticated %}
-            <a href="{% url 'profile' %}">Profile</a>
-            <a href="{% url 'logout' %}">Logout</a>
-        {% else %}
-            <a href="{% url 'sign_up' %}">Sign Up</a>
-            <a href="{% url 'login' %}">Login</a>
-        {% endif %}
-    </nav>
-</header>
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="{% url 'home' %}" class="navbar-logo">
+                <img src="{% static 'booking/images/logo.png' %}" alt="Trip-Easy Logo">
+            </a>
+    
+            <!-- Navigation Links -->
+            <div class="navbar-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'itineraries' %}">Itineraries</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'profile' %}">Profile</a>
+                    <a href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                    <a href="{% url 'sign_up' %}">Sign Up</a>
+                    <a href="{% url 'login' %}">Login</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
 <main class="container">
     {% if messages %}
     <div class="messages">
@@ -34,7 +42,14 @@
     {% block content %}{% endblock %}
 </main>
 <footer>
-    <p>&copy; Trip-Easy 2024. All Rights Reserved.</p>
+    <div class="footer-content">
+        <p>&copy; 2024 Trip-Easy. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </div>
 </footer>
 </body>
 </html>

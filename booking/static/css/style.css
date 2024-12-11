@@ -159,3 +159,63 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 320px) {
+    /* Adjust the hero section for smaller screens */
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Itinerary cards grid */
+    .itineraries {
+        grid-template-columns: 1fr; /* Make cards full width */
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.2em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 10px 5px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

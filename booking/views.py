@@ -14,6 +14,10 @@ def home(request):
 def about(request):
     return render(request, 'booking/about.html')
 
+def itineraries(request):
+    itineraries = Itinerary.objects.all()  # Retrieve all itineraries
+    return render(request, 'booking/itineraries.html', {'itineraries': itineraries})    
+
 def sign_up(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)

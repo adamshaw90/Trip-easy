@@ -21,24 +21,42 @@ header {
     background-color: #283a2c;
     color: #ffffff;
     padding: 10px 20px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Navbar Container */
 .navbar {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and links */
+    background-color: #283a2c; /* Dark green */
+    padding: 10px 20px;
+}
+
+/* Logo */
+.navbar-logo img {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Links */
+.navbar-links {
+    display: flex;
+    gap: 15px; /* Space between links */
+    margin-left: auto;
 }
 
 .navbar-links a {
-    color: #ffffff;
+    color: #ffffff; /* White text */
+    text-decoration: none;
     font-weight: bold;
 }
 
 .navbar-links a:hover {
-    color: #daddc5;
+    color: #daddc5; /* Soft green on hover */
 }
 
 /* Hero Section */

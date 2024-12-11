@@ -11,9 +11,9 @@
         {% for itinerary in itineraries %}
         <div class="card">
             <h3>{{ itinerary.name }}</h3>
-            <p>{{ itinerary.description|truncatewords:20 }}</p>
+            <p>{{ itinerary.description|truncatewords:20|safe }}</p>
             <p><strong>Duration:</strong> {{ itinerary.start_date }} to {{ itinerary.end_date }}</p>
-            <p><strong>Price:</strong> ${{ itinerary.price }}</p>
+            <p><strong>Price:</strong> £{{ itinerary.price }}</p>
             <a href="{% url 'itinerary_detail' itinerary.pk %}" class="btn">View Details</a>
         </div>
         {% endfor %}

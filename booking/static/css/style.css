@@ -144,3 +144,18 @@ footer {
 .social-links a:hover {
     color: #daddc5;
 }
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .itineraries {
+        grid-template-columns: 1fr;
+    }
+}

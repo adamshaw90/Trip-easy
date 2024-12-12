@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f1efec;
+    background-color: #ffffff;
     color: #283a2c;
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #283a2c;
+    color: #ffffff;
 }
 
 a:hover {
@@ -20,7 +20,7 @@ a:hover {
 
 /* Header */
 header {
-    background-color: #283a2c;
+    background-color: #13294b;
     color: #ffffff;
     padding: 10px 20px;
     justify-content: space-between;
@@ -32,14 +32,14 @@ header {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between logo and links */
-    background-color: #283a2c; /* Dark green */
+    justify-content: space-between;
+    background-color: #13294b;
     padding: 10px 20px;
 }
 
 /* Logo */
-.navbar-logo img {
-    height: 50px; /* Adjust logo size */
+.trip-logo {
+    height: 50px;
     width: auto;
     vertical-align: middle;
 }
@@ -107,7 +107,7 @@ h2 {
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: #f4f6ef;
     border: 1px solid #daddc5;
     border-radius: 10px;
     padding: 20px;
@@ -127,16 +127,17 @@ h2 {
 }
 
 .card .btn {
-    background-color: #daddc5;
-    color: #283a2c;
+    background-color: #327d81;
+    color: #ffffff;
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
     font-weight: bold;
 }
 
+
 .card .btn:hover {
-    background-color: #283a2c;
+    background-color: #13294b;
     color: #ffffff;
 }
 

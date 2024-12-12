@@ -7,6 +7,8 @@ body {
     padding: 0;
 }
 
+
+
 a {
     text-decoration: none;
     color: #283a2c;
@@ -59,21 +61,30 @@ header {
     color: #daddc5; /* Soft green on hover */
 }
 
-/* Hero Section */
-.hero {
-    background-color: #daddc5;
-    color: #283a2c;
-    text-align: center;
-    padding: 50px 20px;
+.homepage h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+.homepage p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
 }
 
-.hero p {
+.homepage .btn {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent button */
+    color: #283a2c; /* Dark green text */
+    padding: 10px 20px;
+    border-radius: 5px;
     font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.homepage .btn:hover {
+    background-color: #daddc5; /* Soft green on hover */
+    color: #ffffff;
 }
 
 /* Itineraries Section */

@@ -1,8 +1,29 @@
 {% extends 'booking/base.html' %}
 {% block content %}
-<div class="hero">
+{% load static %}
+<!-- <div class="hero">
     <h1>Welcome to Trip-Easy</h1>
     <p>Your hassle-free travel companion. Explore curated itineraries and experience the world without the stress of planning.</p>
+</div> -->
+
+<style>
+    .homepage {
+        background: url("{% static 'images/beach.jpg' %}") no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+</style>
+
+<div class="homepage">
+    <h1>Welcome to Trip-Easy</h1>
+    <p>Plan your next adventure with ease. Discover itineraries, book trips, and create unforgettable memories.</p>
+    <a href="{% url 'itineraries' %}" class="btn">Explore Itineraries</a>
 </div>
 
 <div class="container">

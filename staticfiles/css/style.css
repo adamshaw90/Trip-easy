@@ -7,6 +7,8 @@ body {
     padding: 0;
 }
 
+
+
 a {
     text-decoration: none;
     color: #283a2c;
@@ -21,27 +23,45 @@ header {
     background-color: #283a2c;
     color: #ffffff;
     padding: 10px 20px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Navbar Container */
 .navbar {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and links */
+    background-color: #283a2c; /* Dark green */
+    padding: 10px 20px;
+}
+
+/* Logo */
+.navbar-logo img {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Links */
+.navbar-links {
+    display: flex;
+    gap: 15px; /* Space between links */
+    margin-left: auto;
 }
 
 .navbar-links a {
-    color: #ffffff;
+    color: #ffffff; /* White text */
+    text-decoration: none;
     font-weight: bold;
 }
 
 .navbar-links a:hover {
-    color: #daddc5;
+    color: #daddc5; /* Soft green on hover */
 }
 
-/* Hero Section */
+/* Hero Section
 .hero {
     background-color: #daddc5;
     color: #283a2c;
@@ -56,6 +76,44 @@ header {
 
 .hero p {
     font-size: 1.2em;
+} */
+
+/* Full background image for the homepage */
+.homepage {
+    background: url("{% static 'images/beach.jpg' %}") no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    color: #ffffff; /* White text for contrast */
+}
+
+.homepage h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.homepage p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.homepage .btn {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent button */
+    color: #283a2c; /* Dark green text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.homepage .btn:hover {
+    background-color: #daddc5; /* Soft green on hover */
+    color: #ffffff;
 }
 
 /* Itineraries Section */
@@ -143,4 +201,79 @@ footer {
 
 .social-links a:hover {
     color: #daddc5;
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .itineraries {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 320px) {
+    /* Adjust the hero section for smaller screens */
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Itinerary cards grid */
+    .itineraries {
+        grid-template-columns: 1fr; /* Make cards full width */
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.2em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 10px 5px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 5px;
+    }
 }

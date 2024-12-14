@@ -29,7 +29,7 @@
 <div class="container">
     <h2>Featured Itineraries</h2>
     <div class="itineraries">
-        {% for itinerary in itineraries %}
+        {% for itinerary in itineraries|slice:":6" %}
         <div class="card">
             <!-- Itinerary Image -->
             {% if itinerary.image %}

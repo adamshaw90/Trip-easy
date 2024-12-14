@@ -5,8 +5,8 @@ body {
     color: #283a2c;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
-
 
 
 a {
@@ -114,6 +114,14 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card img {
+    width: 100%; /* Make image fill the width of the card */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop the image to fit without distortion */
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+    margin-bottom: 15px; /* Space between the image and text */
 }
 
 .card h3 {

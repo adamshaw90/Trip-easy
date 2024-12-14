@@ -3,7 +3,7 @@
 <h2>{{ itinerary.name }}</h2>
 <p>{{ itinerary.description|safe }}</p>
 <p>From: {{ itinerary.start_date }} To: {{ itinerary.end_date }}</p>
-<p>Price: £{{ itinerary.price }}pp</p>
+<p><strong>Price:</strong> £{{ itinerary.price|floatformat:"0" }}pp</p>
 
 {% if user.is_authenticated %}
     <a href="{% url 'book_itinerary' itinerary.pk %}" class="btn btn-primary">Book Now</a>

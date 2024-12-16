@@ -87,6 +87,51 @@ header {
     color: #ffffff;
 }
 
+.about-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack the sections vertically */
+    gap: 40px; /* Space between sections */
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-item:nth-child(even) {
+    /* Optional: reverse layout for every second section for variety */
+    flex-direction: row-reverse;
+}
+
+.about-image {
+    width: 300px; 
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; 
+    /* Ensures image crops nicely if not the same aspect ratio */
+}
+
+.about-text {
+    flex: 1; /* Take up remaining space */
+}
+
+.about-text h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #283a2c;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    color: #283a2c;
+    line-height: 1.6;
+}
+
+
 /* Itineraries Section */
 .container {
     max-width: 1200px;
@@ -255,5 +300,19 @@ footer {
     .social-links {
         flex-direction: column;
         gap: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-item {
+        flex-direction: column;
+    }
+
+    .about-item:nth-child(even) {
+        flex-direction: column; /* No reversal on smaller screens */
+    }
+
+    .about-image {
+        width: 100%;
     }
 }

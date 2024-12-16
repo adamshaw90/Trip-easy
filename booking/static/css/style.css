@@ -20,7 +20,7 @@ a:hover {
 
 /* Header */
 header {
-    background-color: #13294b;
+    background-color: #327d81;
     color: #ffffff;
     padding: 10px 20px;
     justify-content: space-between;
@@ -33,7 +33,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #13294b;
+    background-color: #327d81;
     padding: 10px 20px;
 }
 
@@ -201,7 +201,7 @@ h2 {
 
 /* Footer */
 footer {
-    background-color: #13294b;
+    background-color: #327d81;
     color: #ffffff;
     text-align: center;
     padding: 20px 10px;

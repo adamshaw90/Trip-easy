@@ -28,25 +28,8 @@
 
 <div class="container">
     <h2>Featured Itineraries</h2>
-    <div class="itineraries">
-        {% for itinerary in itineraries|slice:":6" %}
-        <div class="card">
-            <!-- Itinerary Image -->
-            {% if itinerary.image %}
-            <img src="{{ itinerary.image.url }}" alt="{{ itinerary.name }}" class="card-image">
-            {% else %}
-            <img src="{% static 'images/default-placeholder.png' %}" alt="Default Image" class="card-image">
-            {% endif %}
-
-            <h3>{{ itinerary.name }}</h3>
-            <p><strong>Duration:</strong> {{ itinerary.start_date }} to {{ itinerary.end_date }}</p>
-            <p><strong>Price:</strong> £{{ itinerary.price|floatformat:"0" }}pp</p>
-            <a href="{% url 'itinerary_detail' itinerary.pk %}" class="btn">View Details</a>
-        </div>
-        {% endfor %}
-    </div>
+    <!-- Include the itinerary cards partial -->
+    {% include 'booking/itinerary_cards.html' with itineraries=itineraries|slice:":6" %}
 </div>
-
-
 {% endblock %}
 

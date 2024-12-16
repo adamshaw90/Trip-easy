@@ -1,13 +1,8 @@
 {% extends 'booking/base.html' %}
 {% block content %}
-<h2>All Itineraries</h2>
-{% for itinerary in itineraries %}
-<div>
-    <h3>{{ itinerary.name }}</h3>
-    <p>{{ itinerary.description|truncatewords:20|safe }}</p>
-    <a href="{% url 'itinerary_detail' itinerary.pk %}">View Details</a>
+{% load static %}
+<div class="container">
+    <h2>All Itineraries</h2>
+    {% include 'booking/itinerary_cards.html' %}
 </div>
-{% empty %}
-<p>No itineraries found.</p>
-{% endfor %}
 {% endblock %}

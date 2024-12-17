@@ -9,6 +9,8 @@ body {
 }
 
 
+
+
 a {
     text-decoration: none;
     color: #ffffff;
@@ -202,6 +204,58 @@ h2 {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+.itinerary-detail-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #daddc5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.itinerary-detail-container h2 {
+    color: #283a2c;
+    margin-bottom: 20px;
+}
+
+.itinerary-detail-container p {
+    font-size: 1.1em;
+    color: #283a2c;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.itinerary-detail-image {
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: #f1efec;
+    border: 1px solid #daddc5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.review strong {
+    color: #283a2c;
+}
+
+.review p {
+    margin-bottom: 10px;
+    color: #283a2c;
+}
+
+.review small {
+    color: #283a2c;
+    font-size: 0.9em;
+}
+
 /* Profile Section */
 
 .profile-container {
@@ -269,6 +323,22 @@ button {
 }
 
 button:hover {
+    background-color: #283a2c;
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #daddc5;
+    color: #283a2c;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
     background-color: #283a2c;
     color: #ffffff;
 }
@@ -364,6 +434,8 @@ footer {
 .social-links a:hover {
     color: #daddc5;
 }
+
+
 
 
 @media (max-width: 768px) {

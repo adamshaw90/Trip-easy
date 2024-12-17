@@ -1,42 +1,49 @@
 {% extends 'booking/base.html' %}
+{% load static %} <!-- Ensure static is loaded if not already in base.html -->
 {% block content %}
-<h2>{{ itinerary.name }}</h2>
-<p>{{ itinerary.description|safe }}</p>
-<p>From: {{ itinerary.start_date }} To: {{ itinerary.end_date }}</p>
-<p><strong>Price:</strong> £{{ itinerary.price|floatformat:"0" }}pp</p>
+<div class="container itinerary-detail-container">
+    {% if itinerary.image %}
+        <img src="{{ itinerary.image.url }}" alt="{{ itinerary.name }}" class="itinerary-detail-image">
+    {% else %}
+        <img src="{% static 'images/default-placeholder.png' %}" alt="Default Image" class="itinerary-detail-image">
+    {% endif %}
 
-{% if user.is_authenticated %}
-    <a href="{% url 'book_itinerary' itinerary.pk %}" class="btn btn-primary">Book Now</a>
-{% else %}
-    <p>
-        Please <a href="{% url 'login' %}">login</a> or 
-        <a href="{% url 'sign_up' %}">sign up</a> to book this itinerary.
-    </p>
-{% endif %}
+    <h2>{{ itinerary.name }}</h2>
+    <p>{{ itinerary.description|safe }}</p>
+    <p><strong>Duration:</strong> {{ itinerary.start_date }} to {{ itinerary.end_date }}</p>
+    <p><strong>Price:</strong> £{{ itinerary.price|floatformat:"0" }}pp</p>
 
-<h3>Reviews:</h3>
-{% if reviews %}
-    {% for review in reviews %}
-    <div class="review">
-        <strong>{{ review.user.username }}</strong> rated {{ review.rating }} out of 5
-        <p>{{ review.review_text }}</p>
-        <small>Posted on: {{ review.created_at }}</small>
-    </div>
-    {% endfor %}
-{% else %}
-    <p>No reviews yet.</p>
-{% endif %}
+    {% if user.is_authenticated %}
+        <a href="{% url 'book_itinerary' itinerary.pk %}" class="btn">Book Now</a>
+    {% else %}
+        <p>
+            Please <a href="{% url 'login' %}">login</a> or 
+            <a href="{% url 'sign_up' %}">sign up</a> to book this itinerary.
+        </p>
+    {% endif %}
 
-{% if user.is_authenticated %}
-<h3>Leave a Review</h3>
-<form method="POST">
-    {% csrf_token %}
-    {{ review_form.as_p }}
-    <button type="submit">Submit Review</button>
-</form>
-{% else %}
-<p><a href="{% url 'login' %}">Log in</a> or <a href="{% url 'sign_up' %}">sign up</a> to leave a review.</p>
-{% endif %}
+    <h3>Reviews:</h3>
+    {% if reviews %}
+        {% for review in reviews %}
+        <div class="review">
+            <strong>{{ review.user.username }}</strong> rated {{ review.rating }} out of 5
+            <p>{{ review.review_text }}</p>
+            <small>Posted on: {{ review.created_at }}</small>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No reviews yet.</p>
+    {% endif %}
 
+    {% if user.is_authenticated %}
+    <h3>Leave a Review</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ review_form.as_p }}
+        <button type="submit" class="btn">Submit Review</button>
+    </form>
+    {% else %}
+    <p><a href="{% url 'login' %}">Log in</a> or <a href="{% url 'sign_up' %}">sign up</a> to leave a review.</p>
+    {% endif %}
+</div>
 {% endblock %}
-

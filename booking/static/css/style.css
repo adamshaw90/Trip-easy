@@ -92,8 +92,8 @@ header {
     margin: 40px auto;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Stack the sections vertically */
-    gap: 40px; /* Space between sections */
+    flex-direction: column;
+    gap: 40px;
 }
 
 .about-item {
@@ -108,7 +108,6 @@ header {
 }
 
 .about-item:nth-child(even) {
-    /* Optional: reverse layout for every second section for variety */
     flex-direction: row-reverse;
 }
 
@@ -117,11 +116,10 @@ header {
     height: auto;
     border-radius: 10px;
     object-fit: cover; 
-    /* Ensures image crops nicely if not the same aspect ratio */
 }
 
 .about-text {
-    flex: 1; /* Take up remaining space */
+    flex: 1;
 }
 
 .about-text h2 {
@@ -203,6 +201,140 @@ h2 {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
+
+/* Profile Section */
+
+.profile-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #daddc5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.profile-container h2,
+.profile-container h3 {
+    color: #283a2c;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.profile-info p {
+    font-size: 1.1em;
+    color: #283a2c;
+    margin-bottom: 10px;
+}
+
+.profile-info p strong {
+    color: #283a2c;
+    font-weight: bold;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f1efec; /* Light beige background for subtle contrast */
+}
+
+.booking-table th, .booking-table td {
+    border: 1px solid #daddc5;
+    padding: 10px;
+    text-align: left;
+    color: #283a2c;
+    font-size: 1em;
+}
+
+.booking-table th {
+    background-color: #daddc5;
+    color: #283a2c;
+    font-weight: bold;
+}
+
+.booking-table tr:nth-child(even) {
+    background-color: #ffffff; /* Alternate row background */
+}
+
+button {
+    background-color: #daddc5;
+    color: #283a2c;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #283a2c;
+    color: #ffffff;
+}
+
+.profile-actions {
+    margin-top: 20px;
+}
+
+.profile-actions .btn {
+    background-color: #daddc5;
+    color: #283a2c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-actions .btn:hover {
+    background-color: #283a2c;
+    color: #ffffff;
+}
+
+.profile-actions .btn-danger {
+    background-color: #283a2c;
+    color: #ffffff;
+}
+
+.profile-actions .btn-danger:hover {
+    background-color: #daddc5;
+    color: #283a2c;
+}
+
+/* Edit Profile Section */
+
+form label {
+    font-weight: bold;
+    color: #283a2c;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #daddc5;
+    border-radius: 5px;
+    background-color: #f1efec;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #283a2c;
+    background-color: #ffffff;
+}
+
 
 /* Footer */
 footer {

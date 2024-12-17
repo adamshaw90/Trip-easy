@@ -1,13 +1,17 @@
 {% extends 'booking/base.html' %}
 {% block content %}
-<h2>{{ user.username }}'s Profile</h2>
-<p>Full Name: {{ profile.full_name }}</p>
-<p>Address: {{ profile.address }}</p>
-<p>Phone: {{ profile.phone_number }}</p>
+<div class="profile-container">
+    <h2>{{ user.username }}'s Profile</h2>
+    <div class="profile-info">
+        <p><strong>Full Name:</strong> {{ profile.full_name }}</p>
+        <p><strong>Address:</strong> {{ profile.address }}</p>
+        <p><strong>Phone:</strong> {{ profile.phone_number }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
 
-<h3>My Bookings</h3>
-{% if user_bookings %}
-    <table>
+    <h3>My Bookings</h3>
+    {% if user_bookings %}
+    <table class="booking-table">
         <thead>
             <tr>
                 <th>Itinerary</th>
@@ -30,10 +34,13 @@
         {% endfor %}
         </tbody>
     </table>
-{% else %}
+    {% else %}
     <p>You have no bookings at this time.</p>
-{% endif %}
+    {% endif %}
 
-<a href="{% url 'profile_update' %}">Edit Profile</a> |
-<a href="{% url 'profile_delete' %}">Delete Account</a>
+    <div class="profile-actions">
+        <a href="{% url 'profile_update' %}" class="btn">Edit Profile</a> |
+        <a href="{% url 'profile_delete' %}" class="btn btn-danger">Delete Account</a>
+    </div>
+</div>
 {% endblock %}

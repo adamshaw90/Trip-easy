@@ -97,6 +97,10 @@ header {
 }
 
 .about-item {
+    border: 3px solid #327d81;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 20px;

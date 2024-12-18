@@ -72,15 +72,16 @@ def cancel_booking(request, pk):
 def profile_update(request):
     profile = request.user.profile
     if request.method == 'POST':
-        form = ProfileForm(request.POST, instance=profile)
+        form = ProfileForm(request.POST, instance=profile, user=request.user)
         if form.is_valid():
             form.save()
-            messages.success(request, "Profile updated.")
+            messages.success(request, "Profile updated successfully.")
             return redirect('profile')
     else:
-        form = ProfileForm(instance=profile)
+        form = ProfileForm(instance=profile, user=request.user)
     return render(request, 'booking/profile_edit.html', {'form': form})
 
+    
 @login_required
 def delete_profile(request):
     if request.method == 'POST':

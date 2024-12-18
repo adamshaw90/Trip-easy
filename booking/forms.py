@@ -11,10 +11,35 @@ class SignUpForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 class ProfileForm(forms.ModelForm):
+    email = forms.EmailField(
+        required=True,
+        label="Email",
+        widget=forms.EmailInput(attrs={'class': 'form-control'})
+    )
+
     class Meta:
         model = Profile
         fields = ['full_name', 'address', 'phone_number']
 
+    def __init__(self, *args, **kwargs):
+        # Get the user instance passed from the view
+        self.user = kwargs.pop('user', None)
+        super().__init__(*args, **kwargs)
+        # Set initial value for the email field
+        if self.user:
+            self.fields['email'].initial = self.user.email
+
+    def save(self, commit=True):
+        # Save the profile fields
+        profile = super().save(commit=False)
+        # Update the user's email
+        if self.user:
+            self.user.email = self.cleaned_data['email']
+            if commit:
+                self.user.save()
+        if commit:
+            profile.save()
+        return profile
 class ItineraryForm(forms.ModelForm):
     class Meta:
         model = Itinerary

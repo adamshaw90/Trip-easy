@@ -17,8 +17,8 @@
         <a href="{% url 'book_itinerary' itinerary.pk %}" class="btn">Book Now</a>
     {% else %}
         <p>
-            Please <a href="{% url 'login' %}">login</a> or 
-            <a href="{% url 'sign_up' %}">sign up</a> to book this itinerary.
+            Please <a href="{% url 'login' %}" class="btn">login</a> or 
+            <a href="{% url 'sign_up' %}" class="btn">sign up</a> to book this itinerary.
         </p>
     {% endif %}
 
@@ -43,7 +43,7 @@
         <button type="submit" class="btn">Submit Review</button>
     </form>
     {% else %}
-    <p><a href="{% url 'login' %}">Log in</a> or <a href="{% url 'sign_up' %}">sign up</a> to leave a review.</p>
+    <p><a href="{% url 'login' %}" class="btn">Log in</a> or <a href="{% url 'sign_up' %}" class="btn">sign up</a> to leave a review.</p>
     {% endif %}
 </div>
 {% endblock %}

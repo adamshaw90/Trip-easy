@@ -8,7 +8,6 @@ body {
     height: 100%;
 }
 
-
 a {
     text-decoration: none;
     color: #ffffff;
@@ -17,6 +16,8 @@ a {
 a:hover {
     color: #daddc5;
 }
+
+
 
 /* Header */
 header {
@@ -28,6 +29,8 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+
 /* Navbar Container */
 .navbar {
     display: flex;
@@ -37,6 +40,7 @@ header {
     padding: 10px 20px;
 }
 
+
 /* Logo */
 .trip-logo {
     height: 50px;
@@ -44,21 +48,23 @@ header {
     vertical-align: middle;
 }
 
+
+
 /* Links */
 .navbar-links {
     display: flex;
-    gap: 15px; /* Space between links */
+    gap: 15px;
     margin-left: auto;
 }
 
 .navbar-links a {
-    color: #ffffff; /* White text */
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
 .navbar-links a:hover {
-    color: #daddc5; /* Soft green on hover */
+    color: #daddc5;
 }
 
 .homepage h1 {
@@ -72,8 +78,8 @@ header {
 }
 
 .homepage .btn {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent button */
-    color: #283a2c; /* Dark green text */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #283a2c;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1.2em;
@@ -83,7 +89,7 @@ header {
 }
 
 .homepage .btn:hover {
-    background-color: #daddc5; /* Soft green on hover */
+    background-color: #daddc5;
     color: #ffffff;
 }
 
@@ -92,18 +98,22 @@ header {
     margin: 40px auto;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Stack the sections vertically */
-    gap: 40px; /* Space between sections */
+    flex-direction: column;
+    gap: 40px;
 }
 
 .about-item {
+    border: 3px solid #327d81;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
+    background-color: #f4f6ef;
 }
 
 .about-item:nth-child(even) {
-    /* Optional: reverse layout for every second section for variety */
     flex-direction: row-reverse;
 }
 
@@ -112,11 +122,10 @@ header {
     height: auto;
     border-radius: 10px;
     object-fit: cover; 
-    /* Ensures image crops nicely if not the same aspect ratio */
 }
 
 .about-text {
-    flex: 1; /* Take up remaining space */
+    flex: 1;
 }
 
 .about-text h2 {
@@ -132,6 +141,7 @@ header {
 }
 
 
+
 /* Itineraries Section */
 .container {
     max-width: 1200px;
@@ -145,28 +155,30 @@ h2 {
     text-align: center;
 }
 
+
 .itineraries {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-top: 20px;
 }
 
-.card {
-    background-color: #f4f6ef;
-    border: 1px solid #daddc5;
+.itineraries .card {
+    background-color: #f1efec;
+    border: 1px solid #13294b;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card img {
-    width: 100%; /* Make image fill the width of the card */
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Crop the image to fit without distortion */
-    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
-    margin-bottom: 15px; /* Space between the image and text */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 15px;
 }
 
 .card h3 {
@@ -186,6 +198,12 @@ h2 {
     border-radius: 5px;
     display: inline-block;
     font-weight: bold;
+    margin-top: auto;
+}
+
+.card-content {
+    flex: 1;
+    margin-bottom: 20px;
 }
 
 
@@ -198,6 +216,211 @@ h2 {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
+
+.itinerary-detail-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #daddc5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.itinerary-detail-container h2 {
+    color: #283a2c;
+    margin-bottom: 20px;
+}
+
+.itinerary-detail-container p {
+    font-size: 1.1em;
+    color: #283a2c;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.itinerary-detail-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: #f1efec;
+    border: 1px solid #daddc5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.review strong {
+    color: #283a2c;
+}
+
+.review p {
+    margin-bottom: 10px;
+    color: #283a2c;
+}
+
+.review small {
+    color: #283a2c;
+    font-size: 0.9em;
+}
+
+/* Profile Section */
+
+.profile-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #daddc5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.profile-container h2,
+.profile-container h3 {
+    color: #283a2c;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.profile-info p {
+    font-size: 1.1em;
+    color: #283a2c;
+    margin-bottom: 10px;
+}
+
+.profile-info p strong {
+    color: #283a2c;
+    font-weight: bold;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f1efec;
+}
+
+.booking-table th, .booking-table td {
+    border: 1px solid #daddc5;
+    padding: 10px;
+    text-align: left;
+    color: #283a2c;
+    font-size: 1em;
+}
+
+.booking-table th {
+    background-color: #daddc5;
+    color: #283a2c;
+    font-weight: bold;
+}
+
+.booking-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+button {
+    background-color: #daddc5;
+    color: #283a2c;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #283a2c;
+    color: #ffffff;
+}
+
+
+.btn {
+    background-color: #daddc5;
+    color: #283a2c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #283a2c;
+    color: #ffffff;
+}
+
+.profile-actions {
+    margin-top: 20px;
+}
+
+.profile-actions .btn {
+    background-color: #daddc5;
+    color: #283a2c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-actions .btn:hover {
+    background-color: #283a2c;
+    color: #ffffff;
+}
+
+.profile-actions .btn-danger {
+    background-color: #283a2c;
+    color: #ffffff;
+}
+
+.profile-actions .btn-danger:hover {
+    background-color: #daddc5;
+    color: #283a2c;
+}
+
+/* Edit Profile Section */
+
+form label {
+    font-weight: bold;
+    color: #283a2c;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #daddc5;
+    border-radius: 5px;
+    background-color: #f1efec;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #283a2c;
+    background-color: #ffffff;
+}
+
 
 /* Footer */
 footer {
@@ -229,6 +452,8 @@ footer {
 }
 
 
+
+
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2em;
@@ -244,7 +469,7 @@ footer {
 }
 
 @media (max-width: 320px) {
-    /* Adjust the hero section for smaller screens */
+    
     .hero {
         padding: 30px 10px;
     }
@@ -259,7 +484,7 @@ footer {
 
     /* Navbar adjustments */
     .navbar {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
         align-items: center;
         gap: 10px;
     }
@@ -270,27 +495,8 @@ footer {
         gap: 10px;
     }
 
-    /* Itinerary cards grid */
-    .itineraries {
-        grid-template-columns: 1fr; /* Make cards full width */
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    .card h3 {
-        font-size: 1.2em;
-    }
-
-    .card p {
-        font-size: 0.9em;
-    }
-
-    .btn {
-        padding: 8px 12px;
-        font-size: 0.9em;
-    }
+    
+    
 
     /* Footer adjustments */
     footer {
@@ -309,10 +515,23 @@ footer {
     }
 
     .about-item:nth-child(even) {
-        flex-direction: column; /* No reversal on smaller screens */
+        flex-direction: column;
     }
 
     .about-image {
         width: 100%;
     }
 }
+
+@media (max-width: 768px) {
+    .itineraries {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .itineraries {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

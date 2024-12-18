@@ -41,7 +41,6 @@ header {
 }
 
 
-
 /* Logo */
 .trip-logo {
     height: 50px;
@@ -535,3 +534,4 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+

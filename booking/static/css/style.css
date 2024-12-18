@@ -8,9 +8,6 @@ body {
     height: 100%;
 }
 
-
-
-
 a {
     text-decoration: none;
     color: #ffffff;
@@ -19,6 +16,8 @@ a {
 a:hover {
     color: #daddc5;
 }
+
+
 
 /* Header */
 header {
@@ -30,6 +29,8 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+
 /* Navbar Container */
 .navbar {
     display: flex;
@@ -39,12 +40,16 @@ header {
     padding: 10px 20px;
 }
 
+
+
 /* Logo */
 .trip-logo {
     height: 50px;
     width: auto;
     vertical-align: middle;
 }
+
+
 
 /* Links */
 .navbar-links {
@@ -137,6 +142,7 @@ header {
 }
 
 
+
 /* Itineraries Section */
 .container {
     max-width: 1200px;
@@ -158,9 +164,9 @@ h2 {
     margin-top: 20px;
 }
 
-.card {
-    background-color: #f4f6ef;
-    border: 1px solid #daddc5;
+.itineraries .card {
+    background-color: #f1efec;
+    border: 1px solid #13294b;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -193,6 +199,12 @@ h2 {
     border-radius: 5px;
     display: inline-block;
     font-weight: bold;
+    margin-top: auto;
+}
+
+.card-content {
+    flex: 1; /* This allows the content area to grow, pushing the button down */
+    margin-bottom: 20px; /* Spacing below text to separate from button */
 }
 
 
@@ -481,7 +493,7 @@ footer {
         gap: 10px;
     }
 
-    /* Itinerary cards grid */
+    
    
 
 

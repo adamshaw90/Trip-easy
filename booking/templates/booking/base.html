@@ -39,11 +39,11 @@
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 var messages = [{% for message in messages %}"{{ message }}"{% if not forloop.last %},{% endif %}{% endfor %}];
-                // If multiple messages, join them into one string
+                
                 var messageText = Array.isArray(messages) ? messages.join("\\n") : messages;
-                // Set the modal content
+                
                 document.getElementById('modal-body').textContent = messageText;
-                // Show the modal
+              
                 var myModal = new bootstrap.Modal(document.getElementById('messageModal'));
                 myModal.show();
             });

@@ -8,11 +8,16 @@
         {% else %}
             <img src="{% static 'images/default-placeholder.png' %}" alt="Default Image" class="card-image">
         {% endif %}
+
+        <!-- Wrap the text content in a separate div -->
+        <div class="card-content">
+            <h3>{{ itinerary.name }}</h3>
+            <p><strong>Duration:</strong> {{ itinerary.start_date }} to {{ itinerary.end_date }}</p>
+            <p><strong>Price:</strong> £{{ itinerary.price|floatformat:"0" }}pp</p>
+        </div>
         
-        <h3>{{ itinerary.name }}</h3>
-        <p><strong>Duration:</strong> {{ itinerary.start_date }} to {{ itinerary.end_date }}</p>
-        <p><strong>Price:</strong> £{{ itinerary.price|floatformat:"0" }}pp</p>
         <a href="{% url 'itinerary_detail' itinerary.pk %}" class="btn">View Details</a>
     </div>
     {% endfor %}
 </div>
+

@@ -48,7 +48,7 @@ def logout_view(request):
 @login_required
 def profile_view(request):
     profile = request.user.profile
-    # Fetch all bookings for the logged-in user
+    
     user_bookings = Booking.objects.filter(user=request.user)
     return render(request, 'booking/profile.html', {
         'profile': profile,
@@ -63,7 +63,7 @@ def cancel_booking(request, pk):
         messages.success(request, "Your booking has been canceled.")
         return redirect('profile')
     else:
-        # Optionally show a confirmation page if you prefer, but it's not required.
+        
         return redirect('profile')
 
 
@@ -89,7 +89,7 @@ def delete_profile(request):
         return redirect('home')
     return render(request, 'booking/profile_delete_confirm.html')
 
-# Itinerary CRUD
+
 @login_required
 def itinerary_create(request):
     if not request.user.is_superuser:
@@ -141,7 +141,7 @@ def itinerary_delete(request, pk):
         return redirect('home')
     return render(request, 'booking/itinerary_confirm_delete.html', {'itinerary': itinerary})
 
-# Booking a trip (User must be logged in and have a profile)
+
 @login_required
 def book_itinerary(request, pk):
     itinerary = get_object_or_404(Itinerary, pk=pk)

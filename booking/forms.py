@@ -24,7 +24,7 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = []
-        # No fields needed, just a button to confirm booking
+        
 
 class ReviewForm(forms.ModelForm):
     class Meta:

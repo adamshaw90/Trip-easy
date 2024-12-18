@@ -1,10 +1,7 @@
 {% extends 'booking/base.html' %}
 {% block content %}
 {% load static %}
-<!-- <div class="hero">
-    <h1>Welcome to Trip-Easy</h1>
-    <p>Your hassle-free travel companion. Explore curated itineraries and experience the world without the stress of planning.</p>
-</div> -->
+
 
 <style>
     .homepage {
@@ -28,7 +25,7 @@
 
 <div class="container">
     <h2>Featured Itineraries</h2>
-    <!-- Include the itinerary cards partial -->
+    
     {% include 'booking/itinerary_cards.html' with itineraries=itineraries|slice:":6" %}
 </div>
 {% endblock %}

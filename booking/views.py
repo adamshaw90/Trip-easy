@@ -245,4 +245,8 @@ def delete_review(request, review_id):
         messages.success(request, "Review deleted successfully.")
         return redirect('itinerary_detail', pk=itinerary_id)
 
-    return render(request, 'booking/confirm_delete_review.html', {'review': review})    
+    return render(request, 'booking/confirm_delete_review.html', {'review': review})
+
+def custom_404(request, exception):
+    """Custom 404 error handler."""
+    return render(request, 'booking/404.html', status=404)    

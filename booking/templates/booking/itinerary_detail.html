@@ -1,5 +1,5 @@
 {% extends 'booking/base.html' %}
-{% load static %} 
+{% load static %}
 {% block content %}
 <div class="container itinerary-detail-container">
     {% if itinerary.image %}
@@ -29,6 +29,15 @@
             <strong>{{ review.user.username }}</strong> rated {{ review.rating }} out of 5
             <p>{{ review.review_text }}</p>
             <small>Posted on: {{ review.created_at }}</small>
+
+            <!-- Only show edit/delete if user is the review owner or an admin -->
+            {% if user.is_authenticated and user == review.user or user.is_superuser %}
+
+                <div class="review-actions">
+                    <a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="{% url 'delete_review' review.id %}" class="btn btn-sm btn-danger">Delete</a>
+                </div>
+            {% endif %}
         </div>
         {% endfor %}
     {% else %}

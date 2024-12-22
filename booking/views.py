@@ -183,3 +183,45 @@ def itinerary_detail(request, pk):
         'reviews': reviews,
         'review_form': form
     })
+
+@login_required
+def edit_review(request, review_id):
+    """Allow the review owner or admin to edit their review."""
+    review = get_object_or_404(Review, id=review_id)
+
+    # Authorization check: only the review’s owner or superuser can edit
+    if request.user != review.user and not request.user.is_superuser:
+        messages.error(request, "You do not have permission to edit this review.")
+        return redirect('itinerary_detail', pk=review.itinerary.pk)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Review updated successfully.")
+            return redirect('itinerary_detail', pk=review.itinerary.pk)
+    else:
+        form = ReviewForm(instance=review)
+
+    return render(request, 'booking/edit_review.html', {
+        'form': form,
+        'review': review
+    })
+
+@login_required
+def delete_review(request, review_id):
+    """Allow the review owner or admin to delete their review."""
+    review = get_object_or_404(Review, id=review_id)
+
+    # Authorization check
+    if request.user != review.user and not request.user.is_superuser:
+        messages.error(request, "You do not have permission to delete this review.")
+        return redirect('itinerary_detail', pk=review.itinerary.pk)
+
+    if request.method == 'POST':
+        itinerary_id = review.itinerary.pk
+        review.delete()
+        messages.success(request, "Review deleted successfully.")
+        return redirect('itinerary_detail', pk=itinerary_id)
+
+    return render(request, 'booking/confirm_delete_review.html', {'review': review})    

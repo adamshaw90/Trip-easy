@@ -73,6 +73,20 @@ def cancel_booking(request, pk):
         
         return redirect('profile')
 
+@login_required
+def confirm_cancel_booking(request, booking_id):
+    """Ask the user to confirm before canceling their booking."""
+    # Ensure only the owner (or admin) can cancel this booking
+    booking = get_object_or_404(Booking, pk=booking_id, user=request.user)
+    
+    if request.method == 'POST':
+        # User confirmed cancellation
+        booking.delete()  # or set a 'canceled' flag if you prefer soft-deletion
+        messages.success(request, "Booking canceled successfully.")
+        return redirect('profile')  # or wherever you redirect after cancellation
+    
+    # For GET requests, show the confirmation template
+    return render(request, 'booking/confirm_cancel_booking.html', {'booking': booking})
 
 
 @login_required

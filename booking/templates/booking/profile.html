@@ -25,9 +25,9 @@
                 <td>{{ booking.itinerary.name }}</td>
                 <td>{{ booking.created_at }}</td>
                 <td>
-                    <form method="POST" action="{% url 'cancel_booking' booking.pk %}">
+                    <a href="{% url 'cancel_booking' booking.pk %}" class="btn btn-warning">Cancel</a>
                         {% csrf_token %}
-                        <button type="submit">Cancel</button>
+                        
                     </form>
                 </td>
             </tr>

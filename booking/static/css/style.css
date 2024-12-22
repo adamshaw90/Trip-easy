@@ -17,7 +17,16 @@ a:hover {
     color: #daddc5;
 }
 
+.text-center {
+    text-align: center; /* Center inline elements */
+}
 
+.error-image {
+    display: block;
+    margin: 0 auto; /* Center a block-level element */
+    max-width: 300px; /* Optional: limit how large the image gets */
+    height: auto;     /* Maintain aspect ratio */
+}
 
 /* Header */
 header {

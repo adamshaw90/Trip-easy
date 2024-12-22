@@ -2,8 +2,8 @@
 {% load static %}
 {% block content %}
 
-<div class="container">
-    <img src="{% static 'images/404!.png' %}" alt="404 image">
-    <p><a href="{% url 'home' %}" class="btn btn-primary">Go to Home</a></p>
+<div class="container text-center">
+    <img src="{% static 'images/404!.png' %}" alt="404 image" class="error-image">
+    <p><a href="{% url 'home' %}" class="btn btn-primary">Take Me Away!</a></p>
 </div>
 {% endblock %}

@@ -5,7 +5,7 @@
     {% if itinerary.image %}
         <img src="{{ itinerary.image.url }}" alt="{{ itinerary.name }}" class="itinerary-detail-image">
     {% else %}
-        <img src="{% static 'images/default-placeholder.png' %}" alt="Default Image" class="itinerary-detail-image">
+        <img src="{% static 'images/default-placeholder.webp' %}" alt="Default Image" class="itinerary-detail-image">
     {% endif %}
 
     <h2>{{ itinerary.name }}</h2>

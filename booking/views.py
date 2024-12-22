@@ -45,6 +45,13 @@ def logout_view(request):
     logout(request)
     return redirect('home')
 
+def confirm_logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        messages.success(request, "You have been logged out.")
+        return redirect('home')
+    return render(request, 'booking/confirm_logout.html')    
+
 @login_required
 def profile_view(request):
     profile = request.user.profile

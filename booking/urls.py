@@ -1,13 +1,13 @@
 from django.urls import path
 from . import views
-from .views import itinerary_detail, edit_review, delete_review
+from .views import itinerary_detail, edit_review, delete_review, confirm_logout_view
 
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('signup/', views.sign_up, name='sign_up'),
     path('login/', views.login_view, name='login'),
-    path('logout/', views.logout_view, name='logout'),
+   path('logout/', confirm_logout_view, name='logout'),
     path('profile/', views.profile_view, name='profile'),
     path('profile/update/', views.profile_update, name='profile_update'),
     path('profile/delete/', views.delete_profile, name='profile_delete'),

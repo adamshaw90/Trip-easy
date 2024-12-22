@@ -1,8 +1,9 @@
 {% extends 'booking/base.html' %}
+{% load static %}
 {% block content %}
+
 <div class="container">
-    <h2>Page Not Found</h2>
-    <p>Oops! It looks like the page you’re trying to reach doesn’t exist or has been moved.</p>
+    <img src="{% static 'images/404!.png' %}" alt="404 image">
     <p><a href="{% url 'home' %}" class="btn btn-primary">Go to Home</a></p>
 </div>
 {% endblock %}

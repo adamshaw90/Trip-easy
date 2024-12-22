@@ -17,15 +17,17 @@ a:hover {
     color: #daddc5;
 }
 
+/* 404 Image */
+
 .text-center {
-    text-align: center; /* Center inline elements */
+    text-align: center;
 }
 
 .error-image {
     display: block;
-    margin: 0 auto; /* Center a block-level element */
-    max-width: 300px; /* Optional: limit how large the image gets */
-    height: auto;     /* Maintain aspect ratio */
+    margin: 0 auto;
+    max-width: 300px;
+    height: auto;
 }
 
 /* Header */

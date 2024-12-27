@@ -154,6 +154,7 @@ header {
 
 
 /* Itineraries Section */
+
 .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -258,6 +259,8 @@ h2 {
     border-radius: 10px 10px 0 0;
     margin-bottom: 20px;
 }
+
+/* Reviews Section */
 
 .review {
     background-color: #f1efec;
@@ -435,6 +438,7 @@ form select:focus {
 
 
 /* Footer */
+
 footer {
     background-color: #327d81;
     color: #ffffff;
@@ -464,7 +468,7 @@ footer {
 }
 
 
-
+/* Media Queries */
 
 @media (max-width: 768px) {
     .hero h1 {

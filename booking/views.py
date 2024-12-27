@@ -81,9 +81,9 @@ def confirm_cancel_booking(request, booking_id):
     
     if request.method == 'POST':
         # User confirmed cancellation
-        booking.delete()  # or set a 'canceled' flag if you prefer soft-deletion
+        booking.delete() 
         messages.success(request, "Booking canceled successfully.")
-        return redirect('profile')  # or wherever you redirect after cancellation
+        return redirect('profile')
     
     # For GET requests, show the confirmation template
     return render(request, 'booking/confirm_cancel_booking.html', {'booking': booking})

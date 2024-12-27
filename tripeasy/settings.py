@@ -157,7 +157,7 @@ CLOUDINARY_STORAGE = {
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-# Optional: Disable local media handling
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = ''
 

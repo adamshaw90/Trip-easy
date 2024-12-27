@@ -1,131 +1,381 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# TRip-Easy
 
-Welcome Adam Standerwick-Shaw,
+![screenshot](documentation/) MOCKUP IMAGE HERE
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Trip-Easy is a fully functioning web application for a travel agent. The site provides users with information about pre-made holiday itineraries, and allows users to easily create personal accounts and profiles, a holiday booking system and a reviews section. The site also enables administrators to post new itineraries to the site, as well as view and make changes to bookings on behalf of users.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## UX
 
-## Gitpod Reminders
+The design philosophy was to create a simple, colourful yet minimalistic look, in contrast to the over-exaggerated and messy websites that are usually portrayed for the travel industry. The website easliy flows and the website is designed for ease of use and so the user cannot get lost or stuck.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Colour Scheme
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+The color scheme uses an inviting blue and off-white colour scheme to put the eyes and mind at ease when browsing the site.
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+![screenshot](documentation/colour-palette.png)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## User Stories
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+All user stories can be found in a linked GitHub project [here](https://github.com/users/adamshaw90/projects/6)
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Features
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+## Existing Features
 
-### Connecting your Mongo database
+### Site Pages
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+- **Homepage**
 
-------
+    - The main homepage for the site. Hero image is large and striking. Welcome message to let users know what the site is. Call to action button to invite users to enter and explore the site.
 
-## Release History
+![screenshot](documentation/features/site-pages/home1.png)
+![screenshot](documentation/features/site-pages/home2.png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- **About Page**
 
-**June 18, 2024,** Add Mongo back into template
+    - About page. Gives users essential information about the travel agent and their values. Text content accompanied by relevant images helps keep the user engaged and understand the message presented.
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+![screenshot](documentation/features/site-pages/about.png)
 
-**May 28 2024:** Fix Mongo and Links installs
+- **Itineraries Page**
 
-**April 26 2024:** Update node version to 16
+    - Itineraries Page. Displays a selection of itineraries for the user to choose. Once an itinerary is selected, the user can go on to view a detailed description and access the reviews section.
 
-**September 20 2023:** Update Python version to 3.9.17.
+![screenshot](documentation/features/site-pages/itineraries.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![screenshot](documentation/features/site-pages/itin1.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![screenshot](documentation/features/site-pages/itin2.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- **Contact Page**
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+    - Contact Page. Users can see contact information for the tennis club, including 
+    a contact email address and location information. An embedded Google Maps widget allows users to see the club's exact location.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![screenshot](documentation/features/sitepages/contact.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- **Sign-up Page**
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+    - Sign-up Page. Displays a form that new users of the site can fill in and make an account. The form is short, simple, and clean to encourage users to use it.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![screenshot](documentation/features/site-pages/signup.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- **Login Page**
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+    - Login Page. Displays a login form that existing users can use to log in to the site. Two simple input fields for username and password make it easy for users to log in to their account. A Forgot Password link takes users to another page where they can recover their password.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![screenshot](documentation/features/site-pages/login.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- **Profile Page**
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+    - Profile page. Displays a user's profile information. Lets a user see their relevant profile information in a clean and simple way, and contains an edit form that users can use to update their profile information. It also displays any current bookings they have.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![screenshot](documentation/features/site-pages/profile.png)
 
-------
+![screenshot](documentation/features/site-pages/editprofile.png)
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+- **Logout Page**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+    - Logout Page. A simple page confirming that the user has logged out of their account. Displays a log in again button in case the user wishes to log back in.
 
-**How will this affect me?**
+![screenshot](documentation/features/site-pages/logout.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- **Delete Account Page**
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+    - Delete Account Page. A simple page confirming that the user wants to delete their account.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![screenshot](documentation/features/site-pages/deleteacc.png)
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- **Custom Error Page**
 
+    - Custom error handler page. This displays a simple error page that lets the user know that there has been an error loading the url with a button to take them back to the home-page of the site.
+
+![screenshot](documentation/features/site-pages/errorpage.png)
+
+
+### User Features
+
+- **User Registration**
+
+    - Users can register for an account using a front-end form. This creates a user object in the database and automatically secures the user's sensitive information.
+
+![screenshot](documentation/features/user/signup.png)
+
+- **User Login**
+
+    - Users who have made an account can quickly and easily log in to their account in order to access the login-required functionality of the site.
+
+![screenshot](documentation/features/user/login.png)
+
+- **User Logout**
+
+    - Users who are logged in can easily log out in order to stop access to their account-based information and functionality.
+
+![screenshot](documentation/features/user/logout.png)
+
+- **User Password Recovery**
+
+    - Users who have forgotten their password can recover their password via the forgot password link on the login page. Users will enter their email and get a password reset link sent to their account email which they can use to set a new password.
+
+![screenshot](documentation/features/user/password-recover.png)
+
+- **Login Dependant Navbar Links**
+
+    - Users who are logged in see new links in the navbar. 'Register' and 'Login' links are replaced with a 'Profile' link. This provides the user with visual feedback upon logging in, as well as removing links that they will not need.
+
+![screenshot](documentation/features/user/navbefore.png)
+![screenshot](documentation/features/user/navafter.png)
+
+
+- **User Profile Creation**
+
+    - User profiles are automatically created upon user registration. This assigns each user a profile which they can use to see/update their user information.
+
+![screenshot](documentation/features/user/profile.png)
+
+- **User Profile Update**
+
+    - Users can update their profile information using a front-end form located on their user profile page. This allows users to update profile information or correct possible mistakes made at registration.
+
+![screenshot](documentation/features/user/editprofile.png)
+
+- **User Itinerary Booking**
+
+    - Users can use the button on a given itinerary page to book the itinerary - followed by a confirmation.
+
+![screenshot](documentation/features/user/booknow.png)
+![screenshot](documentation/features/user/confirmbook.png)
+
+    This booking will then show in the user profile page.
+
+![screenshot](documentation/features/user/profilebooking.png)
+
+
+
+- **User Itinerary Booking Cancellation**
+
+    - Users can cancel their existing booking using front-end functionality on the site, without having to call or visit the tennis club. On the profile page there is clear and obvious 'cancel' button located on the booking, which will take them to a confirmation page, before deleteing their booking.
+
+![screenshot](documentation/features/user/cancelbooking.png)
+
+
+### Future Features
+
+
+- Update Bookings
+    - A user can edit their booking, without deleting it and creating a new one.
+- Advanced reservation actions for admins
+- Online Payment System
+    - Users can pay the cost of their itinerary booking online.
+
+
+## Tools & Technologies Used
+
+
+- [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
+- [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
+- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
+- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
+- [JavaScript](https://www.javascript.com) used for user interaction on the site.
+- [Python](https://www.python.org) used as the back-end programming language.
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [GitHub](https://github.com) used for secure online code storage.
+- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+- [Django](https://www.djangoproject.com) used as the Python framework for the site.
+- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
+- [CodeInstitute Database](https://dbs.ci-dbs.net/) used as the Postgres database.
+- [Heroku](https://www.heroku.com) used for hosting the deployed site.
+- [Cloudinary](https://cloudinary.com) used for online static file storage.
+- [Cloud Convert](https://cloudconvert.com/webp-to-png) used for image processing.
+- [Gunicorn](https://gunicorn.org/) used for WSGI server
+- [sycopg2](https://pypi.org/project/psycopg2/) used as a PostgreSQL database adapter
+
+## Database Design
+
+While planning this project, I drew up some Entity Relationship Diagrams to help me to visualise the database models and their relationships. 
+
+![screenshot](documentation/usererd.png)
+![screenshot](documentation/itinerd.png)
+![screenshot](documentation/bookingerd.png)
+![screenshot](documentation/profileerd.png)
+![screenshot](documentation/reviewerd.png)
+
+
+## Agile Development Process
+
+### GitHub Projects & Issues
+GitHub projects served as an Agile tool for this project.
+It isn't a specialized tool, but it can be used the same way.
+
+Through it, user stories, issues, and tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+
+![screenshot](documentation/userstories.png)
+
+
+## Testing
+
+For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+## Deployment
+
+The live deployed application can be found deployed on [Heroku](https://trip-easy-d2ed1842c9a5.herokuapp.com/).
+
+
+### Cloudinary API
+
+This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
+
+To obtain your own Cloudinary API key, create an account and log in.
+- For *Primary interest*, you can choose *Programmable Media for image and video API*.
+- Optional: *edit your assigned cloud name to something more memorable*.
+- On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
+- Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
+
+### Heroku Deployment
+
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
+
+| Key | Value |
+| --- | --- |
+| `CLOUDINARY_URL` | user's own value |
+| `DATABASE_URL` | user's own value |
+| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+| `SECRET_KEY` | user's own value |
+
+Heroku needs two additional files in order to deploy properly.
+- requirements.txt
+- Procfile
+
+You can install this project's **requirements** (where applicable) using:
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+- `pip3 freeze --local > requirements.txt`
+
+The **Procfile** can be created with the following command:
+- `echo web: gunicorn app_name.wsgi > Procfile`
+- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+- Select **Automatic Deployment** from the Heroku app.
+
+Or:
+- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+	- `git push heroku main`
+
+The project should now be connected and deployed to Heroku!
+
+### Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+- `pip3 install -r requirements.txt`.
+
+You will need to create a new file called `env.py` at the root-level,
+and include the same environment variables listed above from the Heroku deployment steps.
+
+Sample `env.py` file:
+
+```python
+import os
+
+os.environ.setdefault("CLOUDINARY_URL", "user's own value")
+os.environ.setdefault("DATABASE_URL", "user's own value")
+os.environ.setdefault("SECRET_KEY", "user's own value")
+
+# local environment only (do not include these in production/deployment!)
+os.environ.setdefault("DEBUG", "True")
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
+- Start the Django app: `python3 manage.py runserver`
+- Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
+- Make any necessary migrations: `python3 manage.py makemigrations`
+- Migrate the data to the database: `python3 manage.py migrate`
+- Create a superuser: `python3 manage.py createsuperuser`
+- Load fixtures (if applicable): `python3 manage.py loaddata file-name.json` (repeat for each file)
+- Everything should be ready now, so run the Django app again: `python3 manage.py runserver`
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+#### Cloning
 
----
+You can clone the repository by following these steps:
 
-Happy coding!
+1. Go to the [GitHub repository](https://github.com/adamshaw90/Trip-easy)
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+	- `git clone https://github.com/adamshaw90/Trip-easy.git`
+7. Press Enter to create your local clone.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adamshaw90/Trip-easy)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+#### Forking
+
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+You can fork this repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/adamshaw90/Trip-easy)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+### Local VS Deployment
+
+The local version, created on Gitpod, does not have the functionality to send confirmation emails. This is due to the fact that Gitpod blocks the necessary email port required to carry out this operation. Gitpod blocks this port by default due to concerns about email spam and it cannot be changed.
+
+## Credits
+
+### Media
+
+
+| Source | Location | Type | Notes |
+| --- | --- | --- | --- |
+|  | entire site | image | favicon on all pages
+| [Pixabay](https://pixabay.com/photos/sea-beach-drone-vacations-summer-4768869/) | homepage | image | hero image |
+| [Pixabay](https://pixabay.com/photos/road-highway-mount-cook-7199274/) | homepage, New Zealand itineraries pages | image | itinerary image
+| [Pixabay](https://pixabay.com/photos/surfing-surfer-sea-surf-wave-3846850/) | homepage, Australia itineraries pages | image | itinerary image
+| [Pixabay](https://pixabay.com/photos/cliff-of-moher-ireland-cliffs-coast-2371819/) | homepage, Ireland itineraries pages | image | itinerary image
+| [Pixabay](https://pixabay.com/photos/italy-florence-church-tuscany-4256018/) | homepage, Italy itineraries pages | image | itinerary image
+| [Pixabay](https://pixabay.com/photos/big-ben-westminster-london-england-1143631/) | homepage, Europe itineraries pages | image | itinerary image
+| [Pixabay](https://pixabay.com/photos/taxi-nyc-new-york-city-1574278/) | homepage, USA itineraries pages | image | itinerary image
+| [Pixabay](https://pixabay.com/photos/santorini-greece-buildings-houses-416136/) | homepage, Greece itineraries pages | image | itinerary image
+| [Pixabay](https://pixabay.com/photos/mountains-animal-clouds-llama-6123127/) | homepage, South America itineraries pages | image | itinerary image
+| [Pixabay](https://pixabay.com/photos/landscape-chalet-winter-house-4655698/) | homepage, Canada itineraries pages | image | itinerary image
+| [Pixabay](https://pixabay.com/photos/rocks-beach-sea-ocean-sun-sunset-1239727/) | homepage, itineraries pages | image | default image if set image doesn't load
+| [Pixabay](https://pixabay.com/photos/beach-people-running-ocean-sea-1836467/) | about page | image | our mission image
+| [Pixabay](https://www.pexels.com/photo/a-woman-in-green-bikini-holding-a-book-8157356/) | about page | image | our vision image
+| [Pixabay](https://www.pexels.com/photo/group-of-man-on-a-desert-667202/) | about page | image | our values image
+
+
+### Acknowledgements
+
+- I would like to thank my Code Institute cohort facilitator, Lewis Dillon for their support throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) and fellow students for the moral support.
+- I would like to thank my partner Ottilie for putting up with my countless hours sat on my laptop whilst visiting various countries on a travelling vacation.

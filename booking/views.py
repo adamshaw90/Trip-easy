@@ -4,8 +4,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .models import Itinerary, Booking, Review
-from .forms import SignUpForm, ProfileForm, ItineraryForm, BookingForm, ReviewForm
+from .models import Itinerary, Booking, Review, ContactRequest
+from .forms import SignUpForm, ProfileForm, ItineraryForm, BookingForm, ReviewForm, ContactForm
 
 def home(request):
     itineraries = Itinerary.objects.all()
@@ -249,4 +249,28 @@ def delete_review(request, review_id):
 
 def custom_404(request, exception):
     """Custom 404 error handler."""
-    return render(request, 'booking/404.html', status=404)    
+    return render(request, 'booking/404.html', status=404)
+
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+
+            
+            ContactRequest.objects.create(
+                name=name,
+                email=email,
+                message=message
+            )
+
+            messages.success(request, "Thank you for contacting us! Your request has been received.")
+            return redirect('contact')  
+    else:
+        form = ContactForm()
+
+    return render(request, 'booking/contact.html', {'form': form})

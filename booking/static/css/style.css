@@ -65,6 +65,8 @@ header {
     vertical-align: middle;
 }
 
+
+
 /* --------------------------------------------------
    Home page styling
 -------------------------------------------------- */
@@ -277,6 +279,36 @@ h2 {
     color: #283a2c;
     font-size: 0.9em;
 }
+
+/* --------------------------------------------------
+   Contact page
+-------------------------------------------------- */
+
+
+.contact-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+
+.contact-map, .contact-details {
+    flex: 1;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 400px;
+}
+
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 /* --------------------------------------------------
    Profile page 
@@ -534,5 +566,19 @@ footer {
 @media (min-width: 769px) and (max-width: 1024px) {
     .itineraries {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-map, .contact-details {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contact-map iframe {
+        height: 300px;
     }
 }

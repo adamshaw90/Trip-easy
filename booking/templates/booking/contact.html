@@ -2,10 +2,37 @@
 {% block content %}
 <div class="container">
     <h2>Contact Us</h2>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+
+
+    <!-- Flex container for map + contact info -->
+    <div class="contact-content">
+        <!-- Map Section -->
+        <div class="contact-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4163.7618884323!2d153.61437743222018!3d-28.650960956085605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9062852d3e762b%3A0x40609b49043f2d0!2sByron%20Bay%20NSW%202481!5e0!3m2!1sen!2sau!4v1735460013707!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <p><strong>Address:</strong> 777 Seaview, Byron Bay, NSW, 2481, Australia </p>
+            <p><strong>Phone:</strong> 1800 160 401</p>
+            <p><strong>Email:</strong> info@trip-easy.com</p>
+        </div>
+    </div>
+
+    <!-- Existing Contact Form -->
+    <div class="contact-form" style="margin-top: 20px;">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

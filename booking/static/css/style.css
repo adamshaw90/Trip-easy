@@ -11,11 +11,6 @@ body {
 }
 
 
-a:hover {
-    color: #daddc5;
-}
-
-
 /* --------------------------------------------------
    404 Image 
 -------------------------------------------------- */
@@ -464,10 +459,11 @@ footer {
 .social-links a {
     color: #ffffff;
     font-weight: bold;
+    text-decoration: none !important;
 }
 
 .social-links a:hover {
-    color: #daddc5;
+    transform: scale(1.1);
 }
 
 /* --------------------------------------------------

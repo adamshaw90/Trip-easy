@@ -30,6 +30,9 @@ a:hover {
     height: auto;
 }
 
+/* --------------------------------------------------
+   Header & Navbar
+-------------------------------------------------- */
 
 header {
     background-color: #327d81;
@@ -57,6 +60,9 @@ header {
     transform: scale(1.2);
 }
 
+/* --------------------------------------------------
+   Logo
+-------------------------------------------------- */
 
 .trip-logo {
     height: 50px;
@@ -64,6 +70,9 @@ header {
     vertical-align: middle;
 }
 
+/* --------------------------------------------------
+   Home page styling
+-------------------------------------------------- */
 
 .homepage h1 {
     font-size: 3em;
@@ -90,6 +99,10 @@ header {
     background-color: #daddc5;
     color: #ffffff;
 }
+
+/* --------------------------------------------------
+   About page styling
+-------------------------------------------------- */
 
 .about-container {
     max-width: 1200px;
@@ -244,7 +257,10 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Reviews Section */
+/* --------------------------------------------------
+   Reviews section
+-------------------------------------------------- */
+
 .review {
     background-color: #f1efec;
     border: 1px solid #daddc5;
@@ -267,7 +283,10 @@ h2 {
     font-size: 0.9em;
 }
 
-/* Profile Section */
+/* --------------------------------------------------
+   Profile page 
+-------------------------------------------------- */
+
 .profile-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -385,7 +404,10 @@ button:hover {
     color: #283a2c;
 }
 
-/* Edit Profile Section */
+/* --------------------------------------------------
+   Edit profile page
+-------------------------------------------------- */
+
 form label {
     font-weight: bold;
     color: #283a2c;
@@ -416,7 +438,10 @@ form select:focus {
     background-color: #ffffff;
 }
 
-/* Footer */
+/* --------------------------------------------------
+   Footer
+-------------------------------------------------- */
+
 footer {
     background-color: #327d81;
     color: #ffffff;
@@ -475,6 +500,7 @@ footer {
 }
 
 /* Very small screens */
+
 @media (max-width: 320px) {
     .hero {
         padding: 30px 10px;
@@ -508,6 +534,7 @@ footer {
 }
 
 /* Larger tablets and small laptops */
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .itineraries {
         grid-template-columns: repeat(2, 1fr);

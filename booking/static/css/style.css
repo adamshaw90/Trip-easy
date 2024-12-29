@@ -17,6 +17,7 @@ a:hover {
     color: #daddc5;
 }
 
+
 /* 404 Image */
 
 .text-center {
@@ -57,6 +58,10 @@ header {
     height: 50px;
     width: auto;
     vertical-align: middle;
+}
+
+.navbar-custom {
+    background-color: #327d81 !important;
 }
 
 

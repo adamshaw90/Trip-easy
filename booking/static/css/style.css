@@ -1,4 +1,6 @@
-/* General Styles */
+/* --------------------------------------------------
+   General Styles
+-------------------------------------------------- */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -8,18 +10,15 @@ body {
     height: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: #ffffff;
-}
 
 a:hover {
     color: #daddc5;
 }
 
 
-/* 404 Image */
-
+/* --------------------------------------------------
+   404 Image 
+-------------------------------------------------- */
 .text-center {
     text-align: center;
 }
@@ -31,7 +30,7 @@ a:hover {
     height: auto;
 }
 
-/* Header */
+
 header {
     background-color: #327d81;
     color: #ffffff;
@@ -42,41 +41,29 @@ header {
 }
 
 
-
-/* Navbar Container */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #327d81;
-    padding: 10px 20px;
+.navbar-custom {
+    background-color: #327d81 !important; 
 }
 
 
-/* Logo */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-custom .nav-link:hover {
+    transform: scale(1.2);
+}
+
+
 .trip-logo {
     height: 50px;
     width: auto;
     vertical-align: middle;
 }
 
-
-/* Links */
-.navbar-links {
-    display: flex;
-    gap: 15px;
-    margin-left: auto;
-}
-
-.navbar-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar-links a:hover {
-    color: #daddc5;
-}
 
 .homepage h1 {
     font-size: 3em;
@@ -151,10 +138,9 @@ header {
     line-height: 1.6;
 }
 
-
-
-/* Itineraries Section */
-
+/* --------------------------------------------------
+   Itineraries Section
+-------------------------------------------------- */
 .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -167,7 +153,6 @@ h2 {
     margin-bottom: 20px;
     text-align: center;
 }
-
 
 .itineraries {
     display: grid;
@@ -219,7 +204,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-
 .card .btn:hover {
     background-color: #13294b;
     color: #ffffff;
@@ -261,7 +245,6 @@ h2 {
 }
 
 /* Reviews Section */
-
 .review {
     background-color: #f1efec;
     border: 1px solid #daddc5;
@@ -285,7 +268,6 @@ h2 {
 }
 
 /* Profile Section */
-
 .profile-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -355,7 +337,6 @@ button:hover {
     color: #ffffff;
 }
 
-
 .btn {
     background-color: #daddc5;
     color: #283a2c;
@@ -405,7 +386,6 @@ button:hover {
 }
 
 /* Edit Profile Section */
-
 form label {
     font-weight: bold;
     color: #283a2c;
@@ -436,9 +416,7 @@ form select:focus {
     background-color: #ffffff;
 }
 
-
 /* Footer */
-
 footer {
     background-color: #327d81;
     color: #ffffff;
@@ -467,9 +445,11 @@ footer {
     color: #daddc5;
 }
 
+/* --------------------------------------------------
+   Media Queries
+-------------------------------------------------- */
 
-/* Media Queries */
-
+/* Tablet-ish */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2em;
@@ -482,72 +462,54 @@ footer {
     .itineraries {
         grid-template-columns: 1fr;
     }
+
+    .about-item {
+        flex-direction: column;
+    }
+    .about-item:nth-child(even) {
+        flex-direction: column;
+    }
+    .about-image {
+        width: 100%;
+    }
 }
 
+/* Very small screens */
 @media (max-width: 320px) {
-    
     .hero {
         padding: 30px 10px;
     }
-
     .hero h1 {
         font-size: 1.8em;
     }
-
     .hero p {
         font-size: 0.9em;
     }
 
-    /* Navbar adjustments */
+   
     .navbar {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-
     .navbar-links {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
-    
-    
-
-    /* Footer adjustments */
     footer {
         padding: 10px 5px;
     }
-
     .social-links {
         flex-direction: column;
         gap: 5px;
     }
 }
 
-@media (max-width: 768px) {
-    .about-item {
-        flex-direction: column;
-    }
-
-    .about-item:nth-child(even) {
-        flex-direction: column;
-    }
-
-    .about-image {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .itineraries {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* Larger tablets and small laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
     .itineraries {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-

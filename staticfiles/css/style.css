@@ -1,4 +1,6 @@
-/* General Styles */
+/* --------------------------------------------------
+   General Styles
+-------------------------------------------------- */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -8,18 +10,25 @@ body {
     height: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: #ffffff;
+
+/* --------------------------------------------------
+   404 Image 
+-------------------------------------------------- */
+.text-center {
+    text-align: center;
 }
 
-a:hover {
-    color: #daddc5;
+.error-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    height: auto;
 }
 
+/* --------------------------------------------------
+   Header & Navbar
+-------------------------------------------------- */
 
-
-/* Header */
 header {
     background-color: #327d81;
     color: #ffffff;
@@ -30,42 +39,37 @@ header {
 }
 
 
-
-/* Navbar Container */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #327d81;
-    padding: 10px 20px;
+.navbar-custom {
+    background-color: #327d81 !important; 
 }
 
 
-/* Logo */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-custom .nav-link:hover {
+    transform: scale(1.2);
+}
+
+/* --------------------------------------------------
+   Logo
+-------------------------------------------------- */
+
 .trip-logo {
-    height: 50px;
+    height: 60px;
     width: auto;
     vertical-align: middle;
 }
 
 
 
-/* Links */
-.navbar-links {
-    display: flex;
-    gap: 15px;
-    margin-left: auto;
-}
-
-.navbar-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar-links a:hover {
-    color: #daddc5;
-}
+/* --------------------------------------------------
+   Home page styling
+-------------------------------------------------- */
 
 .homepage h1 {
     font-size: 3em;
@@ -92,6 +96,10 @@ header {
     background-color: #daddc5;
     color: #ffffff;
 }
+
+/* --------------------------------------------------
+   About page styling
+-------------------------------------------------- */
 
 .about-container {
     max-width: 1200px;
@@ -140,9 +148,9 @@ header {
     line-height: 1.6;
 }
 
-
-
-/* Itineraries Section */
+/* --------------------------------------------------
+   Itineraries Section
+-------------------------------------------------- */
 .container {
     max-width: 1200px;
     margin: 20px auto;
@@ -155,7 +163,6 @@ h2 {
     margin-bottom: 20px;
     text-align: center;
 }
-
 
 .itineraries {
     display: grid;
@@ -207,7 +214,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-
 .card .btn:hover {
     background-color: #13294b;
     color: #ffffff;
@@ -248,6 +254,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* --------------------------------------------------
+   Reviews section
+-------------------------------------------------- */
+
 .review {
     background-color: #f1efec;
     border: 1px solid #daddc5;
@@ -270,7 +280,39 @@ h2 {
     font-size: 0.9em;
 }
 
-/* Profile Section */
+/* --------------------------------------------------
+   Contact page
+-------------------------------------------------- */
+
+
+.contact-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+
+.contact-map, .contact-details {
+    flex: 1;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 400px;
+}
+
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* --------------------------------------------------
+   Profile page 
+-------------------------------------------------- */
 
 .profile-container {
     max-width: 1200px;
@@ -341,7 +383,6 @@ button:hover {
     color: #ffffff;
 }
 
-
 .btn {
     background-color: #daddc5;
     color: #283a2c;
@@ -390,7 +431,9 @@ button:hover {
     color: #283a2c;
 }
 
-/* Edit Profile Section */
+/* --------------------------------------------------
+   Edit profile page
+-------------------------------------------------- */
 
 form label {
     font-weight: bold;
@@ -422,8 +465,10 @@ form select:focus {
     background-color: #ffffff;
 }
 
+/* --------------------------------------------------
+   Footer
+-------------------------------------------------- */
 
-/* Footer */
 footer {
     background-color: #327d81;
     color: #ffffff;
@@ -446,15 +491,18 @@ footer {
 .social-links a {
     color: #ffffff;
     font-weight: bold;
+    text-decoration: none !important;
 }
 
 .social-links a:hover {
-    color: #daddc5;
+    transform: scale(1.1);
 }
 
+/* --------------------------------------------------
+   Media Queries
+-------------------------------------------------- */
 
-
-
+/* Tablet-ish */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2em;
@@ -467,68 +515,53 @@ footer {
     .itineraries {
         grid-template-columns: 1fr;
     }
+
+    .about-item {
+        flex-direction: column;
+    }
+    .about-item:nth-child(even) {
+        flex-direction: column;
+    }
+    .about-image {
+        width: 100%;
+    }
 }
 
+/* Very small screens */
+
 @media (max-width: 320px) {
-    
     .hero {
         padding: 30px 10px;
     }
-
     .hero h1 {
         font-size: 1.8em;
     }
-
     .hero p {
         font-size: 0.9em;
     }
 
-    /* Navbar adjustments */
+   
     .navbar {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-
     .navbar-links {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
-    
-    
-
-    /* Footer adjustments */
     footer {
         padding: 10px 5px;
     }
-
     .social-links {
         flex-direction: column;
         gap: 5px;
     }
 }
 
-@media (max-width: 768px) {
-    .about-item {
-        flex-direction: column;
-    }
-
-    .about-item:nth-child(even) {
-        flex-direction: column;
-    }
-
-    .about-image {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .itineraries {
-        grid-template-columns: 1fr;
-    }
-}
+/* Larger tablets and small laptops */
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .itineraries {
@@ -536,3 +569,16 @@ footer {
     }
 }
 
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-map, .contact-details {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contact-map iframe {
+        height: 300px;
+    }
+}

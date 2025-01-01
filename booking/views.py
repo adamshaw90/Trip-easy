@@ -175,7 +175,7 @@ def book_itinerary(request, pk):
             booking.itinerary = itinerary
             booking.save()
             messages.success(request, "Trip booked successfully!")
-            return redirect('home')
+            return redirect('profile')
     else:
         form = BookingForm()
     return render(request, 'booking/booking_form.html', {'form': form, 'itinerary': itinerary})

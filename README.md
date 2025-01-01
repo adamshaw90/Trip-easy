@@ -1,6 +1,6 @@
-# TRip-Easy
+# Trip-Easy
 
-![screenshot](documentation/) MOCKUP IMAGE HERE
+![screenshot](documentation/mockup.png)
 
 Trip-Easy is a fully functioning web application for a travel agent. The site provides users with information about pre-made holiday itineraries, and allows users to easily create personal accounts and profiles, a holiday booking system and a reviews section. The site also enables administrators to post new itineraries to the site, as well as view and make changes to bookings on behalf of users.
 

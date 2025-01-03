@@ -154,7 +154,6 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 ![screenshot](documentation/features/user/profilebooking.png)
 
 
-
 - **User Itinerary Booking Cancellation**
 
     - Users can cancel their existing booking using front-end functionality on the site, without having to call or visit the tennis club. On the profile page there is clear and obvious 'cancel' button located on the booking, which will take them to a confirmation page, before deleteing their booking.

@@ -53,10 +53,10 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **Contact Page**
 
-    - Contact Page. Users can see contact information for the tennis club, including 
-    a contact email address and location information. An embedded Google Maps widget allows users to see the club's exact location.
+    - Contact Page. Users can see contact information for Trip-Easy, including 
+    a contact email address and location information. An embedded Google Maps widget allows users to see the business's exact location. There is also a form that can be filled out by users.
 
-![screenshot](documentation/features/sitepages/contact.png)
+![screenshot](documentation/features/sitepages/contactpage.png)
 
 - **Sign-up Page**
 
@@ -121,15 +121,10 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 ![screenshot](documentation/features/user/logout.png)
 
-- **User Password Recovery**
-
-    - Users who have forgotten their password can recover their password via the forgot password link on the login page. Users will enter their email and get a password reset link sent to their account email which they can use to set a new password.
-
-![screenshot](documentation/features/user/password-recover.png)
 
 - **Login Dependant Navbar Links**
 
-    - Users who are logged in see new links in the navbar. 'Register' and 'Login' links are replaced with a 'Profile' link. This provides the user with visual feedback upon logging in, as well as removing links that they will not need.
+    - Users who are logged in see new links in the navbar. 'Sign Up' and 'Login' links are replaced with 'Profile' and 'Logout' links. This provides the user with visual feedback upon logging in, as well as removing links that they will not need.
 
 ![screenshot](documentation/features/user/navbefore.png)
 ![screenshot](documentation/features/user/navafter.png)
@@ -172,9 +167,12 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - Update Bookings
     - A user can edit their booking, without deleting it and creating a new one.
-- Advanced reservation actions for admins
-- Online Payment System
+- Advanced reservation actions for admins.
+- Online Payment System.
     - Users can pay the cost of their itinerary booking online.
+- Advanced itinerary actions for admins.
+    - Front end itinerary creation.
+    - Front end edit and delete functions.
 
 
 ## Tools & Technologies Used
@@ -196,8 +194,9 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 - [Heroku](https://www.heroku.com) used for hosting the deployed site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [Cloud Convert](https://cloudconvert.com/webp-to-png) used for image processing.
-- [Gunicorn](https://gunicorn.org/) used for WSGI server
-- [sycopg2](https://pypi.org/project/psycopg2/) used as a PostgreSQL database adapter
+- [Gunicorn](https://gunicorn.org/) used for WSGI server.
+- [sycopg2](https://pypi.org/project/psycopg2/) used as a PostgreSQL database adapter.
+- [AmIResponsive](https://ui.dev/amiresponsive) used as a mock-up maker.
 
 ## Database Design
 
@@ -378,4 +377,4 @@ The local version, created on Gitpod, does not have the functionality to send co
 - I would like to thank my Code Institute cohort facilitator, Lewis Dillon for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) and fellow students for the moral support.
-- I would like to thank my partner Ottilie for putting up with my countless hours sat on my laptop whilst visiting various countries on a travelling vacation.
+- I would like to thank my wife Ottilie for putting up with my countless hours sat on my laptop whilst visiting various countries on a travelling vacation.

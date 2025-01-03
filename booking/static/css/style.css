@@ -30,9 +30,7 @@ body {
 -------------------------------------------------- */
 
 header {
-    background-color: #327d81;
     color: #ffffff;
-    padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

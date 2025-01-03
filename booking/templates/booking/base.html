@@ -25,6 +25,7 @@
 
     <script src="https://kit.fontawesome.com/e31f5a7661.js" crossorigin="anonymous"></script>
     <script src="{% static 'js/modal-handler.js'%}"></script>
+ 
 </head>
 <body>
     <header>
@@ -88,21 +89,21 @@
             </div>
         </div>
     </nav>
-    <main class="container">
-        {% if messages %}
-        <script type="application/json" id="django-messages">
-            [
-                {% for message in messages %}
-                    "{{ message|escapejs }}"{% if not forloop.last %},{% endif %}
-                {% endfor %}
-            ]
-        </script>
-        {% endif %}
-        {% block content %}{% endblock %}
-    </main>
-
-</header>
     
+</header>
+
+<main class="container">
+    {% if messages %}
+    <script type="application/json" id="django-messages">
+        [
+            {% for message in messages %}
+                "{{ message|escapejs }}"{% if not forloop.last %},{% endif %}
+            {% endfor %}
+        ]
+    </script>
+    {% endif %}
+    {% block content %}{% endblock %}
+</main>
 
 <!-- Social media links -->
 

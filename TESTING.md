@@ -65,7 +65,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tennisclub/py-validation-tennisclub-views.png) | Pass: No Errors |
 | wsgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tennisclub/py-validation-tennisclub-wsgi.png) | Pass: No Errors |
 
-#### Validation For Users App
+#### Validation For Booking App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-admin.png) | Pass: No Errors |
@@ -75,28 +75,6 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | signals.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-signals.png) | Pass: No Errors |
 | tests.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-tests.png) | Pass: No Errors |
 | views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-views.png) | Pass: No Errors |
-
-
-#### Validation For Website App
-| File | CI URL | Screenshot | Notes |
-| --- | --- | --- | --- |
-| admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/website/py-validation-website-admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/website/py-validation-website-apps.png) | Pass: No Errors |
-| models.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/website/py-validation-website-models.png) | Pass: No Errors |
-| tests.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/website/py-validation-website-tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/website/py-validation-website-urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/website/py-validation-website-views.png) | Pass: No Errors |
-
-
-#### Validation For Reservations App
-| File | CI URL | Screenshot | Notes |
-| --- | --- | --- | --- |
-| admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/reservations/py-validation-reservations-admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/reservations/py-validation-reservations-apps.png) | Pass: No Errors |
-| models.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/reservations/py-validation-reservations-models.png) | Pass: No Errors |
-| tests.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/reservations/py-validation-reservations-tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/reservations/py-validation-reservations-urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/reservations/py-validation-reservations-views.png) | Pass: No Errors |
 
 
 ## Browser Compatibility
@@ -110,9 +88,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Firefox | ![screenshot](documentation/browsers/firefox.png) | Works as expected |
 | Edge | ![screenshot](documentation/browsers/edge.png) | No smooth-scrolling |
 | Safari | ![screenshot](documentation/browsers/safari.png) | Works as expected |
-| Brave | ![screenshot](documentation/browsers/brave.png) | No smooth-scrolling |
-| Opera | ![screenshot](documentation/browsers/opera.png) | No smooth-scrolling |
-| Internet Explorer | ![screenshot](documentation/browsers/iex.png) | Multiple broken elements |
+
 
 ## Responsiveness
 
@@ -123,16 +99,13 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Mobile (DevTools) | ![screenshot](documentation/responsiveness/mobile.png) | Works as expected |
 | Tablet (DevTools) | ![screenshot](documentation/responsiveness/tablet.png) | Works as expected |
 | Desktop | ![screenshot](documentation/responsiveness/desktop.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsiveness/xl.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsiveness/4k.png) | Noticeable scaling issues |
-| Oneplus Nord2 | ![screenshot](documentation/responsiveness/oneplus.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsiveness/iphone14.png) | Works as expected |
+
 
 ## Lighthouse Audit
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
-### Website App Templates - Mobile Testing
+### Booking App Templates - Mobile Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-home.png) | Some minor performance warnings |
@@ -149,7 +122,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Custom Error 500 | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-500.png) | Some minor performance warnings |
 
 
-### Website App Templates - Desktop Testing
+### Booking App Templates - Desktop Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-home.png) | Some minor performance warnings |
@@ -165,49 +138,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Custom Error 404 | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-404.png) | No warnings |
 | Custom Error 500 | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-500.png) | No warnings |
 
-### Users App Templates - Mobile Testing
-| Page | Size | Screenshot | Notes |
-| --- | --- | --- | --- |
-| Login | Mobile | ![screenshot](documentation/lighthouse/users/mobile/users-mobile-login.png) | Some minor performance warnings |
-| Logout | Mobile | ![screenshot](documentation/lighthouse/users/mobile/users-mobile-logout.png) | Some minor performance warnings |
-| Register | Mobile | ![screenshot](documentation/lighthouse/users/mobile/users-mobile-register.png) | Some minor performance warnings |
-| Profile | Mobile | ![screenshot](documentation/lighthouse/users/mobile/users-mobile-profile.png) | Some minor performance warnings |
-| Password reset | Mobile | ![screenshot](documentation/lighthouse/users/mobile/users-mobile-password-reset.png) | Some minor performance warnings |
-| Password reset-done | Mobile | ![screenshot](documentation/lighthouse/users/mobile/users-mobile-password-reset-done.png) | Some minor performance warnings |
-| Password reset-confirm | Mobile | ![screenshot](documentation/lighthouse/users/mobile/users-mobile-password-reset-confirm.png) | Some minor performance warnings |
-| Password reset-complete | Mobile | ![screenshot](documentation/lighthouse/users/mobile/users-mobile-password-reset-complete.png) | Some minor performance warnings |
-
-### Users App Templates - Desktop Testing
-| Page | Size | Screenshot | Notes |
-| --- | --- | --- | --- |
-| Login | Desktop | ![screenshot](documentation/lighthouse/users/desktop/users-desktop-login.png) | No warnings |
-| Logout | Desktop | ![screenshot](documentation/lighthouse/users/desktop/users-desktop-logout.png) | No warnings |
-| Register | Desktop | ![screenshot](documentation/lighthouse/users/desktop/users-desktop-register.png) | Minor performance warnings |
-| Profile | Desktop | ![screenshot](documentation/lighthouse/users/desktop/users-desktop-profile.png) | No warnings |
-| Password reset | Desktop | ![screenshot](documentation/lighthouse/users/desktop/users-desktop-password-reset.png) | No warnings |
-| Password reset-done | Desktop | ![screenshot](documentation/lighthouse/users/desktop/users-desktop-password-reset-done.png) | No warnings |
-| Password reset-confirm | Desktop | ![screenshot](documentation/lighthouse/users/desktop/users-desktop-password-reset-confirm.png) | No warnings |
-| Password reset-complete | Desktop | ![screenshot](documentation/lighthouse/users/desktop/users-desktop-password-reset-complete.png) | No warnings |
-
-### Reservations App Templates - Mobile Testing
-| Page | Size | Screenshot | Notes |
-| --- | --- | --- | --- |
-| Reservation List | Mobile | ![screenshot](documentation/lighthouse/reservations/mobile/reservations-mobile-list.png) | Some minor performance warnings |
-| Reservation User List | Mobile | ![screenshot](documentation/lighthouse/reservations/mobile/reservations-mobile-user-list.png) | Warning about link text (ignored as link is a Bootstrap button) |
-| Reservation Detail | Mobile | ![screenshot](documentation/lighthouse/reservations/mobile/reservations-mobile-detail.png) | Some minor performance warnings |
-| Reservation Confirm Delete | Mobile | ![screenshot](documentation/lighthouse/reservations/mobile/reservations-mobile-confirm-delete.png) | Some minor performance warnings |
-| Reservation Date | Mobile | ![screenshot](documentation/lighthouse/reservations/mobile/reservations-mobile-date.png) | Some minor performance warnings |
-| Reservation Form | Mobile | ![screenshot](documentation/lighthouse/reservations/mobile/reservations-mobile-form.png) | Some minor performance warnings |
-
-### Reservations App Templates - Desktop Testing
-| Page | Size | Screenshot | Notes |
-| --- | --- | --- | --- |
-| Reservation List | Desktop | ![screenshot](documentation/lighthouse/reservations/desktop/reservations-desktop-list.png) | Minor performance warnings |
-| Reservation User List | Desktop | ![screenshot](documentation/lighthouse/reservations/desktop/reservations-desktop-user-list.png) | Warning about link text (ignored as link is a Bootstrap button) |
-| Reservation Detail | Desktop | ![screenshot](documentation/lighthouse/reservations/desktop/reservations-desktop-detail.png) | No warnings |
-| Rservation Confirm Delete | Desktop | ![screenshot](documentation/lighthouse/reservations/desktop/reservations-desktop-confirm-delete.png) | No warnings |
-| Reservation Date | Desktop | ![screenshot](documentation/lighthouse/reservations/desktop/reservations-desktop-date.png) | No warnings |
-| Reservation Form | Desktop | ![screenshot](documentation/lighthouse/reservations/desktop/reservations-desktop-form.png) | No warnings |
 
 ## Defensive Programming
 

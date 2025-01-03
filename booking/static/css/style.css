@@ -68,6 +68,17 @@ header {
 /* --------------------------------------------------
    Home page styling
 -------------------------------------------------- */
+.homepage {
+    background: url("../images/beach.webp") no-repeat center center fixed; 
+    background-size: cover;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 .homepage h1 {
     font-size: 3em;

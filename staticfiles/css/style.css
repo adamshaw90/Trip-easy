@@ -30,9 +30,7 @@ body {
 -------------------------------------------------- */
 
 header {
-    background-color: #327d81;
-    color: #ffffff;
-    padding: 10px 20px;
+    color: black;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -70,6 +68,17 @@ header {
 /* --------------------------------------------------
    Home page styling
 -------------------------------------------------- */
+.homepage {
+    background: url("../images/beach.webp") no-repeat center center fixed; 
+    background-size: cover;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 .homepage h1 {
     font-size: 3em;

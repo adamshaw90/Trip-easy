@@ -55,22 +55,20 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 #### Validation For Trip-Easy App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| asgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
-| settings.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
-| urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
-| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
-| wsgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
+| asgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/tripeasy_asgi.png) | Pass: No Errors |
+| settings.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/tripeasy_settings.png) | Pass: No Errors |
+| urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/tripeasy_urls.png) | Pass: No Errors |
+| wsgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/tripeasy_wsgi.png) | Pass: No Errors |
 
 #### Validation For Booking App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
-| apps.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
-| forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
-| models.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
-| signals.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
-| tests.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
-| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
+| admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_admin.png) | Pass: No Errors |
+| apps.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_apps.png) | Pass: No Errors |
+| forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_forms.png) | Pass: No Errors |
+| models.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_models.png) | Pass: No Errors |
+| urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_views.png) | Pass: No Errors |
 
 
 ## Browser Compatibility

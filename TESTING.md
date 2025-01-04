@@ -36,7 +36,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | ![screenshot](documentation/validation/css/css-validation-style.png) | Pass: No Errors |
+| style.css | ![screenshot](documentation/validation/css/css_validation.png) | Pass: No Errors |
 
 ### JavaScript
 
@@ -44,7 +44,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| modal-handler.js | ![screenshot](documentation//validation/js/js-validation-modal.png) | Pass: No Errors |
+| modal-handler.js | ![screenshot](documentation//validation/js/js_validation.png) | Pass: No Errors - 1 'Undefined' message as bootstrap link is in the base.html file. |
 
 
 
@@ -55,22 +55,22 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 #### Validation For Trip-Easy App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| asgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tennisclub/py-validation-tennisclub-asgi.png) | Pass: No Errors |
-| settings.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tennisclub/py-validation-tennisclub-settings.png) | Pass: No Errors |
-| urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tennisclub/py-validation-tennisclub-urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tennisclub/py-validation-tennisclub-views.png) | Pass: No Errors |
-| wsgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tennisclub/py-validation-tennisclub-wsgi.png) | Pass: No Errors |
+| asgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
+| settings.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
+| urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
+| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
+| wsgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/) | Pass: No Errors |
 
 #### Validation For Booking App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-apps.png) | Pass: No Errors |
-| forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-forms.png) | Pass: No Errors |
-| models.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-models.png) | Pass: No Errors |
-| signals.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-signals.png) | Pass: No Errors |
-| tests.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-tests.png) | Pass: No Errors |
-| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/users/py-validation-users-views.png) | Pass: No Errors |
+| admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
+| apps.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
+| forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
+| models.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
+| signals.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
+| tests.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
+| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/) | Pass: No Errors |
 
 
 ## Browser Compatibility

@@ -5,6 +5,7 @@ from django.dispatch import receiver
 from django_ckeditor_5.fields import CKEditor5Field
 from cloudinary.models import CloudinaryField
 
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=255, blank=True)
@@ -13,6 +14,7 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
 
 class Itinerary(models.Model):
     name = models.CharField(max_length=200)
@@ -25,6 +27,7 @@ class Itinerary(models.Model):
     def __str__(self):
         return self.name
 
+
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE)
@@ -32,6 +35,7 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.user.username} booked {self.itinerary.name}"
+
 
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -49,9 +53,9 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
     else:
-        
         if hasattr(instance, 'profile'):
             instance.profile.save()
+
 
 class ContactRequest(models.Model):
     name = models.CharField(max_length=100)

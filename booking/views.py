@@ -7,16 +7,20 @@ from django.contrib.auth.models import User
 from .models import Itinerary, Booking, Review, ContactRequest
 from .forms import SignUpForm, ProfileForm, ItineraryForm, BookingForm, ReviewForm, ContactForm
 
+
 def home(request):
     itineraries = Itinerary.objects.all()
     return render(request, 'booking/home.html', {'itineraries': itineraries})
 
+
 def about(request):
     return render(request, 'booking/about.html')
 
+
 def itineraries(request):
-    itineraries = Itinerary.objects.all()  # Retrieve all itineraries
+    itineraries = Itinerary.objects.all()
     return render(request, 'booking/itineraries.html', {'itineraries': itineraries})    
+
 
 def sign_up(request):
     if request.method == 'POST':
@@ -30,6 +34,7 @@ def sign_up(request):
         form = SignUpForm()
     return render(request, 'booking/sign_up.html', {'form': form})
 
+
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
@@ -41,9 +46,11 @@ def login_view(request):
         form = AuthenticationForm()
     return render(request, 'booking/login.html', {'form': form})
 
+
 def logout_view(request):
     logout(request)
     return redirect('home')
+
 
 def confirm_logout_view(request):
     if request.method == 'POST':
@@ -51,6 +58,7 @@ def confirm_logout_view(request):
         messages.success(request, "You have been logged out.")
         return redirect('home')
     return render(request, 'booking/confirm_logout.html')    
+
 
 @login_required
 def profile_view(request):
@@ -62,6 +70,7 @@ def profile_view(request):
         'user_bookings': user_bookings
     })
 
+
 @login_required
 def cancel_booking(request, pk):
     booking = get_object_or_404(Booking, pk=pk, user=request.user)
@@ -72,6 +81,7 @@ def cancel_booking(request, pk):
     else:
         
         return redirect('profile')
+
 
 @login_required
 def confirm_cancel_booking(request, booking_id):
@@ -127,13 +137,16 @@ def itinerary_create(request):
         form = ItineraryForm()
     return render(request, 'booking/itinerary_form.html', {'form': form})
 
+
 def itinerary_list(request):
     itineraries = Itinerary.objects.all()
     return render(request, 'booking/itinerary_list.html', {'itineraries': itineraries})
 
+
 def itinerary_detail(request, pk):
     itinerary = get_object_or_404(Itinerary, pk=pk)
     return render(request, 'booking/itinerary_detail.html', {'itinerary': itinerary})
+
 
 @login_required
 def itinerary_update(request, pk):
@@ -150,6 +163,7 @@ def itinerary_update(request, pk):
     else:
         form = ItineraryForm(instance=itinerary)
     return render(request, 'booking/itinerary_form.html', {'form': form})
+
 
 @login_required
 def itinerary_delete(request, pk):
@@ -180,6 +194,7 @@ def book_itinerary(request, pk):
         form = BookingForm()
     return render(request, 'booking/booking_form.html', {'form': form, 'itinerary': itinerary})
 
+
 def itinerary_detail(request, pk):
     itinerary = get_object_or_404(Itinerary, pk=pk)
     reviews = Review.objects.filter(itinerary=itinerary).order_by('-created_at')
@@ -205,6 +220,7 @@ def itinerary_detail(request, pk):
         'review_form': form
     })
 
+
 @login_required
 def edit_review(request, review_id):
     """Allow the review owner or admin to edit their review."""
@@ -229,6 +245,7 @@ def edit_review(request, review_id):
         'review': review
     })
 
+
 @login_required
 def delete_review(request, review_id):
     """Allow the review owner or admin to delete their review."""
@@ -247,6 +264,7 @@ def delete_review(request, review_id):
 
     return render(request, 'booking/confirm_delete_review.html', {'review': review})
 
+
 def custom_404(request, exception):
     """Custom 404 error handler."""
     return render(request, 'booking/404.html', status=404)
@@ -256,12 +274,11 @@ def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            
+
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
 
-            
             ContactRequest.objects.create(
                 name=name,
                 email=email,

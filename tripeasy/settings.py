@@ -30,11 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-adamshaw90-tripeasy-sazwp0empwc.ws.codeinstitute-ide.net','.herokuapp.com'
-]
-
-
-
+ALLOWED_HOSTS = ['8000-adamshaw90-tripeasy-sazwp0empwc.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -53,7 +49,8 @@ CKEDITOR_5_CONFIGS = {
     "default": {
         "toolbar": [
             "heading", "|",
-            "bold", "italic", "link", "bulletedList", "numberedList", "blockQuote", "|",
+            "bold", "italic", "link",
+            "bulletedList", "numberedList", "blockQuote", "|",
             "undo", "redo"
         ],
         "width": "100%",

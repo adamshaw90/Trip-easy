@@ -10,27 +10,23 @@ Return back to the [README.md](README.md) file.
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
 | Page | Screenshot | Notes |
-| --- | --- | --- | --- |
-| 404 | ![screenshot](documentation/validation/html/html-validation-404.png) | Pass: No Errors |
+| --- | --- | --- |
+| 404 | ![screenshot](documentation/validation/html/html-validation-404.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
 | About | ![screenshot](documentation/validation/html/html-validation-about.png) | Pass: No Errors |
-| Add Review | ![screenshot](documentation/validation/html/html-validation-add_review.png) | Pass: No Errors |
-| Base | ![screenshot](documentation/validation/html/html-validation-base.png) | Pass: No Errors |
-| Booking Form | ![screenshot](documentation/validation/html/html-validation-booking_form.png) | Pass: No Errors |
-| Cancel Booking Confirmation | ![screenshot](documentation/validation/html/html-validation-confirm_cancel.png) | Pass: No Errors |
-| Delete Review Confirmation | ![screenshot](documentation/validation/html/html-validation-review_delete.png) | Pass: No Errors |
-| Logout Confirmation | ![screenshot](documentation/validation/html/html-validation-logout_confirm.png) | Pass: No Errors |
+| Base/Home | ![screenshot](documentation/validation/html/html-validation-base.png) | Pass: No Errors |
+| Booking Form | ![screenshot](documentation/validation/html/html-validation-booking_confirmation.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
+| Cancel Booking Confirmation | ![screenshot](documentation/validation/html/html-validation-cancel_booking_confirmation.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
+| Delete Review Confirmation | ![screenshot](documentation/validation/html/html-validation-confirm_delete_review.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
+| Logout Confirmation | ![screenshot](documentation/validation/html/html-validation-logout_confirmation.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
 | Contact | ![screenshot](documentation/validation/html/html-validation-contact.png) | Pass: No Errors |
-| Review Edit | ![screenshot](documentation/validation/html/html-validation-review_edit.png) | Pass: No Errors |
-| Home | ![screenshot](documentation/validation/html/html-validation-home.png) | Pass: No Errors |
-| Itinerary Cards | ![screenshot](documentation/validation/html/html-validation-itinerary_cards.png) | Pass: No Errors |
-| Itinerary Delete Confirmation | ![screenshot](documentation/validation/html/html-validation-itinerary_delete.png) | Pass: No Errors |
-| Itinerary Details | ![screenshot](documentation/validation/html/html-validation-itinerary_details.png) | Pass: No Errors |
-| Itinerary Form | ![screenshot](documentation/validation/html/html-validation-itinerary_form.png) | Pass: No Errors |
-| Itinerary List | ![screenshot](documentation/validation/html/html-validation-itinerary_list.png) | Pass: No Errors |
+| Review Edit | ![screenshot](documentation/validation/html/html-validation-edit_review.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
+| Itinerary Cards | ![screenshot](documentation/validation/html/html-validation-itineraries.png) | Pass: No Errors |
+| Itinerary Delete Confirmation | ![screenshot](documentation/validation/html/html-validation-cancel_booking_confirmation.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
+| Itinerary Details | ![screenshot](documentation/validation/html/html-validation-itinerary_detail.png) | Pass: No Errors |
 | Login | ![screenshot](documentation/validation/html/html-validation-login.png) | Pass: No Errors |
-| Delete Profile Confirmation | ![screenshot](documentation/validation/html/html-validation-profile_delete.png) | Pass: No Errors |
-| Edit Profile | ![screenshot](documentation/validation/html/html-validation-edit_profile.png) | Pass: No Errors |
-| Profile | ![screenshot](documentation/validation/html/html-validation-profile.png) | Pass: No Errors |
+| Delete Profile Confirmation | ![screenshot](documentation/validation/html/html-validation-profile_delete_confirmation.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
+| Edit Profile | ![screenshot](documentation/validation/html/html-validation-edit_profile.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
+| Profile | ![screenshot](documentation/validation/html/html-validation-profile.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
 | Sign Up | ![screenshot](documentation/validation/html/html-validation-signup.png) | Pass: No Errors |
 
 

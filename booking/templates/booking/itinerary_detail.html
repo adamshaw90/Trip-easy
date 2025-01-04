@@ -9,7 +9,7 @@
     {% endif %}
 
     <h2>{{ itinerary.name }}</h2>
-    <p>{{ itinerary.description|safe }}</p>
+    {{ itinerary.description|safe }}
     <p><strong>Duration:</strong> {{ itinerary.start_date }} to {{ itinerary.end_date }}</p>
     <p><strong>Price:</strong> £{{ itinerary.price|floatformat:"0" }}pp</p>
 

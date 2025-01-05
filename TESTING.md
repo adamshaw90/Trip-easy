@@ -161,6 +161,7 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Booking Confirmation Page | | | | |
 | | Click on Confirm Booking button | Redirect to Profile confirmation page | Pass | |
+| | Click on Cancel button | Redirect to itinerary page | Pass | |
 
 | Login Page | | | | |
 | | Enter valid email address | Field will only accept email address format | Pass | |

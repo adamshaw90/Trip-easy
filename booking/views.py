@@ -183,12 +183,9 @@ def book_itinerary(request, pk):
     itinerary = get_object_or_404(Itinerary, pk=pk)
 
     if request.method == 'POST':
-        # If the user clicked the "Cancel" button
         if 'cancel' in request.POST:
-            messages.info(request, "Booking canceled.")
             return redirect('itinerary_detail', pk=pk)
 
-        # Otherwise, process the form to book
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)

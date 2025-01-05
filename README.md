@@ -354,7 +354,7 @@ The local version, created on Gitpod, does not have the functionality to send co
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-|  | entire site | image | favicon on all pages
+| [Pixabay](https://pixabay.com/vectors/palm-tree-landscape-silhouette-5257139/) | entire site | image | favicon on all pages
 | [Pixabay](https://pixabay.com/photos/sea-beach-drone-vacations-summer-4768869/) | homepage | image | hero image |
 | [Pixabay](https://pixabay.com/photos/road-highway-mount-cook-7199274/) | homepage, New Zealand itineraries pages | image | itinerary image
 | [Pixabay](https://pixabay.com/photos/surfing-surfer-sea-surf-wave-3846850/) | homepage, Australia itineraries pages | image | itinerary image

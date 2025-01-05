@@ -137,60 +137,54 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
 | | Click on About link in navbar | Redirection to About page | Pass | |
-| | Click on News link in navbar | Redirection to News page | Pass | |
-| | Click on Contact link in navbar | Redirection to Contace page | Pass | |
-| | Click on Register link in navbar | Redirection to Register page | Pass | |
+| | Click on Itineraries link in navbar | Redirection to Itineraries page | Pass | |
+| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
+| | Click on Profile link in navbar | Redirection to Profile page | Pass | |
 | | Click on Login link in navbar | Redirection to Login page | Pass | |
-| | Click on My Account - My Profile link in navbar | Redirection to User Profile page | Pass | |
-| | Click on My Account - My Reservations link in navbar | Redirection to User Reservation List | Pass | |
-| | Click on My Account - Logout link in navbar | Log out & Redirection to Logout page | Pass | |
-| News Page | | | | |
-| | Click on Read More button on post | Redirection to that post details page | Pass | |
-| | Click on post title | Redirection to that post details page | Pass | |
-| | Click on Pagination nav number | Redirection to that pagination page | Pass | |
-| | Click on Pagination right arrow | Redirection to next pagination page | Pass | |
-| | Click on Pagination double right arrow | Redirection to last pagination page | Pass | |
-| | Click on Pagination left arrow | Redirection to previous pagination page | Pass | |
-| | Click on Pagination double left arrow | Redirection to first pagination page | Pass | |
-| Register | | | | |
+| | Click on Sign Up link in navbar | Redirection to Sign Up page | Pass | |
+| | Click on Log Out link in navbar | Log out and Redirection to Home page | Pass | |
+| | Click on Social links in Footer | Redirection to corresponding social page | Pass | |
+
+| Home page | | | | |
+| | Click on Explore Itineraries button on hero image | Redirection to Itineraries page | Pass | |
+| | Click on Featured Itineraries View Details button | Redirection to that itinerary's details page | Pass | |
+
+| Itineraries page | | | | |
+| | Click on any itinerary's View Details button | Redirection to that itinerary's details page | Pass | |
+
+| Itinerary Details Page | | | | |
+| | Click on Book Now button | Redirect to booking confirmation page | Pass | |
+| | Click on back button | Redirect to reservation list page | Pass | |
+| | Click on back button | Redirect to reservation list page | Pass | |
+| | Click on back button | Redirect to reservation list page | Pass | |
+| | Click on back button | Redirect to reservation list page | Pass | |
+
+| Booking Confirmation Page | | | | |
+| | Click on Confirm Booking button | Redirect to Profile confirmation page | Pass | |
+
+| Login Page | | | | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password (twice) | Field will only accept password format | Pass | |
 | | Click on Sign Up button | Redirects user to blank Login page | Pass |
-| Log In | | | | |
+
+| Sign Up Page | | | | |
 | | Enter valid password | Field will only accept password format | Pass | |
 | | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
+
+| Log Out Page | | | | |
 | | Click Logout button | Logs out user, Redirects user to logout page | Pass |
-| Profile | | | | |
+
+| Profile Page | | | | |
 | | Click on the Edit Profile button | Edit profile form appears | Pass | |
 | | Click on the Upcoming reservations link | Redirects to user reservation list | Pass | |
 | | Users cannot visit other user's profiles |  Redirects user back to own profile | Pass |
-| User Reservation List | | | | |
+
+| Contact Page | | | | |
 | | Click on the new reservation - click here button | Redirect to Reservation Form | Pass | |
 | | Click on view in the reservation list | Redirects to that reservation's details | Pass | |
-| Reservation Details | | | | |
-| | Click on cancel reservation button | Redirect to deletion confirmation page | Pass | |
-| | Click on back button | Redirect to reservation list page | Pass | |
-| Reservation Delete Confirm | | | | |
-| | Click on cancel reservation button | Delete reservation, display message, redirect to reservation list | Pass | |
-| | Click on back button | Redirect to reservation details page | Pass | |
+
 | Site Navigations - Logged Out User | | | | |
 | | Navigate to any login required URL | Redirect to login page, redirect back after login | Pass | |
-| Nav links - Admin | | | | |
-| | Click on Admin - New Post link in navbar | Log out & Redirection to Logout page | Pass | |
-| | Click on Admin - Reservations link in navbar | Log out & Redirection to Logout page | Pass | |
-| New Post - Admin | | | | |
-| | Enter Post Title | Field is required | Pass | |
-| | Enter Post Subtitle | Field is required | Pass | |
-| | Enter Post Content | Field is required | Pass | |
-| | Enter Post Image | Default is used if left blank | Pass | |
-| Master Reservation List - Admin | | | | |
-| | Click on view in the reservation list | Redirects to that reservation's details | Pass | |
-| | Enter a date in the date search box | Filter reservations by that date | Pass | |
-| | Enter a name in the date search box | Filter reservations by that name | Pass | |
-| Reservation Details - Admin| | | | |
-| | Click on cancel reservation button | Can view/delete other users' reservations | Pass |
-| | Click on back button | Redirect to reservation list page | Pass | |
 
 
 ## User Story Testing

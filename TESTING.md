@@ -144,179 +144,102 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Sign Up link in navbar | Redirection to Sign Up page | Pass | |
 | | Click on Log Out link in navbar | Log out and Redirection to Home page | Pass | |
 | | Click on Social links in Footer | Redirection to corresponding social page | Pass | |
-
 | Home page | | | | |
 | | Click on Explore Itineraries button on hero image | Redirection to Itineraries page | Pass | |
 | | Click on Featured Itineraries View Details button | Redirection to that itinerary's details page | Pass | |
-
 | Itineraries page | | | | |
 | | Click on any itinerary's View Details button | Redirection to that itinerary's details page | Pass | |
-
 | Itinerary Details Page | | | | |
 | | Click on Book Now button | Redirect to booking confirmation page | Pass | |
 | | Click on back button | Redirect to reservation list page | Pass | |
 | | Click on back button | Redirect to reservation list page | Pass | |
 | | Click on back button | Redirect to reservation list page | Pass | |
 | | Click on back button | Redirect to reservation list page | Pass | |
-
 | Booking Confirmation Page | | | | |
 | | Click on Confirm Booking button | Redirect to Profile confirmation page | Pass | |
 | | Click on Cancel button | Redirect to itinerary page | Pass | |
-
-| Login Page | | | | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Redirects user to blank Login page | Pass |
-
-| Sign Up Page | | | | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-
-| Log Out Page | | | | |
-| | Click Logout button | Logs out user, Redirects user to logout page | Pass |
-
-| Profile Page | | | | |
-| | Click on the Edit Profile button | Edit profile form appears | Pass | |
-| | Click on the Upcoming reservations link | Redirects to user reservation list | Pass | |
-| | Users cannot visit other user's profiles |  Redirects user back to own profile | Pass |
-
 | Contact Page | | | | |
-| | Click on the new reservation - click here button | Redirect to Reservation Form | Pass | |
-| | Click on view in the reservation list | Redirects to that reservation's details | Pass | |
-
+| |  Enter name | Redirect to Contact Form | Pass | |
+| |  Enter valid email address | Redirect to Contact Form | Pass | |
+| | Enter message | Redirect to Contact Form | Pass | |
+| | Click on Submit button | Redirect to Contact page | Pass | |
+| | Click on Google Map | Navigates as it should | Pass | |
+| Login Page | | | | |
+| | Enter valid Username | Field will only accept registered users | Pass | |
+| | Enter valid password | Field will only accept password format | Pass | |
+| | Click on Log In button | Redirects user to Home Page | Pass |
+| | Click on Sign Up button | Redirects user to Sign Up Page | Pass |
+| Sign Up Page | | | | |
+| | Enter valid Username | Field will only accept username format | Pass | |
+| | Enter valid password (twice) | Field will only accept password format | Pass | |
+| | Click Register button | Redirects user to home page | Pass | |
+| Log Out Page | | | | |
+| | Click Logout button | Logs out user, Redirects user to Home page | Pass |
+| | Click Cancel button | Keeps user logged in, redirects to Home page | Pass |
+| Profile Page | | | | |
+| | Click on the Edit Profile button | Redirects to Edit Profile page | Pass | |
+| | Click on the Delete Account button | Redirects to Delete Account Confirmation page | Pass | |
+| | Click on the Cancel booking button | Redirects to Delete Booking Confirmation page | Pass | |
+| Edit Profile Page | | | | |
+| | Enter user details | Field will only accept email format | Pass | |
+| | Click on the Save Changes button | Redirects to Profile page | Pass | |
+| | Click on the Cancel button | Redirects to Profile page | Pass | |
+| Delete Account Confirmation Page | | | | |
+| | Click on the Delete My Account button | Deletes account and redirects to Home page | Pass | |
+| | Click on the Cancel button | Redirects to Profile page without deleting account | Pass | |
+| Delete Booking Confirmation Page | | | | |
+| | Click on the Yes, Cancel button | Deletes booking and redirects to Profile page | Pass | |
+| | Click on the No, Go Back button | Keeps booking and redirects to Profile page | Pass | |
+| | Click on the Cancel booking button | Redirects to Delete Booking Confirmation page | Pass | |
 | Site Navigations - Logged Out User | | | | |
-| | Navigate to any login required URL | Redirect to login page, redirect back after login | Pass | |
+| | Navigate to any login required URL | Give option to Login or Sign Up | Pass | |
 
 
 ## User Story Testing
 
 | User Story | Screenshot |
 | --- | --- |
-| As a user I can view the site so that I can learn about the tennis club | ![screenshot](documentation/features/sitepages/home.png) |
-| As a user I can access different areas of the site, depending on whether I am logged in or not, so that I do not engage with site functionalities that require an account, if I do not have one. | ![screenshot](documentation/features/user/login-navbar-links.png) |
-| As a user I can create a personalised user profile so that I can see my user details and other personalised information. | ![screenshot](documentation/features/sitepages/profile.png) |
-| As a user I can see different site navigation links when I am logged in so that I can easily access areas of the site that require login, and do not see confusing 'login' links when already logged in. | ![screenshot](documentation/features/user/login-navbar-links.png) |
-| As a user I can navigate around different pages in the site so that I can see the relevant information in an organised manner | ![screenshot](documentation/features/sitepages/home.png) |
-| As a user I can create a secure account so that I can have a personal presence on the site, as well as access any account-based functionalities | ![screenshot](documentation/features/sitepages/register.png) |
-| As a user I can see the user sign in page when I try to access 'logged-in-only' site pages or functionalities so that I can quickly and easily log in and then continue with my intended use of the site. | ![screenshot](documentation/features/sitepages/login.png) |
-| As a user I can book a tennis court via the booking system so that I can easily reserve a time slot in which to play tennis at the club | ![screenshot](documentation/features/user/court-reservation.png) |
-| As a user I can see a visual representation of all available and unavailable timeslots so that I can, at a glance, see what times are free to book | ![screenshot](documentation/features/user/timeslot-availability.png) |
-| As a user I can see a paginated list of site posts so that I see only the most up-to-date posts and can navigate to older posts if I wish | ![screenshot](documentation/features/sitepages/pagination.png)|
-| As a user I can delete my existing booking so that I can easily cancel a reserved time slot, should I need to | ![screenshot](documentation/features/user/cancel-reservation.png) |
-| As a user I can reset my account password so that I can retain access to my account, even if I forget my password. | ![screenshot](documentation/features/user/password-recover.png) |
-| As an account holder I can update my profile information so that my profile is personalised and contains accurate information | ![screenshot](documentation/features/user/profile-update.png) |
-| As an account holder I can upload a profile picture so that my profile is personalised to me and is recognisable at a glance | ![screenshot](documentation/features/user/profile-update.png) |
-| As an account holder I can update or remove my profile picture so that my profile stays current to my preferences | ![screenshot](documentation/features/user/profile-update.png) |
-| As an account holder I can logout so that access to my account is stopped and my information is kept secure | ![screenshot](documentation/features/sitepages/logout.png) |
-| As an account holder I can login to the site so that I can access account-based functionalities and information | ![screenshot](documentation/features/sitepages/login.png) |
-| As an administrator I can update select site content via a back-end interface so that I can add and remove content from the site, without engaging with the site's code | ![screenshot](documentation/features/admin/django-back-end.png) |
-| As an administrator I can update site content via a front-end interface so that I can edit certain sections of the site in a user-friendly and repeatable way | ![screenshot](documentation/features/admin/update-post.png) |
-| As an administrator I can update users' privileges so that I can allow/restrict user and staff engagement with the back end of the site | ![screenshot](documentation/features/admin/user-status.png) |
-| As an administrator I can send emails to users automatically so that the user can receive confirmation and other emails, without having to manually send these out. | ![screenshot](documentation/features/user/email-confirmation1.png) | ![screenshot](documentation/features/user/email-confirmation2.png) |
-| As an administrator I can create my own, or view/edit/delete users' court bookings so that I have complete control over the booking system, and can help users to manage their bookings | ![screenshot](documentation/features/admin/reservation-delete.png) |
-| As an administrator I can encrypt users' passwords so that the passwords remain secure and unexploitable by anyone with access to the back end of the site | ![screenshot](documentation/features/admin/password-storage.png) |
-| As an administrator I can create/edit users so that I can test various functionalities of the site, as well as troubleshoot problems a specific user may have. | ![screenshot](documentation/features/admin/django-back-end.png) |
-
-
-
-
-
-
-
-## Automated Testing
-
-
-### Python (Unit Testing)
-
-I have used Django's built-in unit testing framework to test the application functionality.
-
-In order to run the tests, I ran the following command in the terminal each time:
-
-`python3 manage.py test name-of-app `
-
-To create the coverage report, I would then run the following commands:
-
-`coverage run --source=name-of-app manage.py test`
-
-`coverage report`
-
-To see the HTML version of the reports, and find out whether some pieces of code were missing, I ran the following commands:
-
-`coverage html`
-
-`python3 -m http.server`
-
-Below are the results from the various apps on my application that I've tested:
-
-| App | File | Coverage | Screenshot |
-| --- | --- | --- | --- |
-| Users | tests.py | 99% | ![screenshot](documentation/py-test/users.png) |
-| Reservations | tests.py | 89% | ![screenshot](documentation/py-test/reservations.png) |
-| Website | tests.py | 97% | ![screenshot](documentation/py-test/website.png) |
+| As a user I want to log into my account so that I can access my saved trips and profile settings. | ![screenshot](documentation/features/site-pages/profilewithbooking.png) |
+|As a user I want to recover my account if I forget my password, so that I can regain access without creating a new account. | ![screenshot](documentation/features/site-pages/contactpage.png) |
+| As a user I want to sign up for an account so that I can access the website's features. | ![screenshot](documentation/features/site-pages/signup.png) |
+| As a user I want to log out of my account so that my session is securely ended. | ![screenshot](documentation/features/site-pages/logout.png) |
+| As a user I want to book a trip from the itinerary page so that I can reserve my spot. | ![screenshot](documentation/features/site-pages/itin2.png) |
+| As a user I want to update my account information so that I can keep my details accurate. | ![screenshot](documentation/features/site-pages/editprofile.png) |
+| As an admin I want to create, update, or delete itineraries, so that I can keep the trip offerings up-to-date. | ![screenshot](documentation/features/site-pages/itinadmin.png) |
+| As an admin I want to view and manage user bookings so that I can handle any issues or changes efficiently. | ![screenshot](documentation/features/site-pages/bookingadmin.png) |
 
 
 ## Bugs
 
 
-- Hero image on homepge is not appearing.
+- Navbar items wouldn't align on right.
 
-    ![screenshot](documentation/bugs/homepage-image.png)
+    - To fix this, I had to remove css for header display:flex for them to align to the right.
 
-    - To fix this, I fixed a syntax error in the jinja template in home.html
+- Raw html showing on homepage cards.
 
-- Footer social icons are not appearing
+    ![screenshot](documentation/bugs/rawhtmlbug.png)
 
-    ![screenshot](documentation/bugs/social-icons.png)
+    - To fix this, I had to add 'safe' to base home.html
 
-    - To fix this, I fixed an error in the fontawesome script in base.html
+- Card buttons not staying at the bottom.
 
-- About Page layout is broken
+    ![screenshot](documentation/bugs/buttonsbug.png)
 
-    ![screenshot](documentation/bugs/about-page.png)
+    - To fix this, I wrapped the card contents in a separate div and added css to the button : margin-top: auto;
 
-    - To fix this, I removed the 'page-container' CSS class from the page container which had the `display: flex` property.
+- Logo not showing.
 
-- News posts are not using the default image correctly
+    ![screenshot](documentation/bugs/logobug.png)
 
-    ![screenshot](documentation/bugs/news-default-images.png)
+    - To fix this, I had to resize the logo image as the file size was too large.
 
-    - To fix this, I fixed an error in the logic of the News for loop in the django templating language on news.html
+- Footer not staying fixed to the bottom of the page on soame pages.
 
-- Dropdown Nav Links have broken styling
+    ![screenshot](documentation/bugs/footerbug.png)
 
-    ![screenshot](documentation/bugs/nav-dropdown.png)
+    - To fix this I had to set the .homepage height to 100vh.
 
-    - To fix this, I fixed the incorrect class name of the nav link dropdowns, which was causing Bootstrap to identify them incorrectly
-
-- Update profile button is unclickable
-
-    ![screenshot](documentation/bugs/profile-update-button.png)
-
-    - To fix this, I fixed a syntax error in the profile.js Javascript file, wherein an Event Listener was not targeting the button correctly
-
-- User reservation list is not populating correctly
-
-    ![screenshot](documentation/bugs/user-reservation-list.png)
-
-    - To fix this, I fixed an error in the Django templating language for loop in reservation_user_list.html, wherein the `if` statement needed to reference `User.username`, not simply `User`
-
-- Long string of letters is appearing on reservation form
-
-    ![screenshot](documentation/bugs/csrf.png)
-
-    - To fix this, I fixed the function in the date.js Javascript file which was hiding certain elements of the form. This function was unintentionally deleting the hidden input type on the csrf input field, causing it to be rendered on the form page. 
-
-- Reservation timeslots not being stylized/disabled as they should when reaching a certain number of bookings
-
-    ![screenshot](documentation/bugs/timeslots.png)
-
-    - To fix this, I added a loop to run the `AvailabilityCheck()` function in JS, which was previously only running once and not for all available timeslots
-
-- Admin cannot delete other user's reservations
-
-    ![screenshot](documentation/bugs/admin-delete-reservations.png)
-
-    - To fix this, I added an `if/else` statement to the reservation view which checked if a user was the reservation's creator, or if the user was a staff member
 
 
 **Open Issues**

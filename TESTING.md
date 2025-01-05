@@ -101,35 +101,30 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 ### Booking App Templates - Mobile Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-home.png) | Some minor performance warnings |
-| About | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-about.png) | Some minor performance warnings |
-| News | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-news.png) | Warning about link text (ignored as link is a Bootstrap button) |
-| Contact | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-contact.png) | Some minor performance warnings |
-| Base | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-base.png) | Some minor performance warnings |
-| Post-Detail | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-post-detail.png) | Some minor performance warnings |
-| Post-Form | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-post-form.png) | Some minor performance warnings |
-| Post-Confirm-Delete | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-post-confirm-delete.png) | Some minor performance warnings |
-| Custom Error 400 | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-400.png) | Some minor performance warnings |
-| Custom Error 403 | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-403.png) | Some minor performance warnings |
-| Custom Error 404 | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-404.png) | Some minor performance warnings |
-| Custom Error 500 | Mobile | ![screenshot](documentation/lighthouse/website/mobile/website-mobile-500.png) | Some minor performance warnings |
+| Home | Mobile | ![screenshot](documentation/lighthouse/mobile/light-home.png) | Some minor performance warnings |
+| About | Mobile | ![screenshot](documentation/lighthouse/mobile/light-about.png) | Some minor performance warnings |
+| Itineraries | Mobile | ![screenshot](documentation/lighthouse/mobile/light-itineraries.png) | Warning about link text (ignored as link is a Bootstrap button) |
+| Itinerary Detail | Mobile | ![screenshot](documentation/lighthouse/mobile/light-itinerary-detail.png) | Some minor performance warnings |
+| Contact | Mobile | ![screenshot](documentation/lighthouse/mobile/light-contact.png) | Some minor performance warnings |
+| Profile | Mobile | ![screenshot](documentation/lighthouse/mobile/light-profile.png) | Some minor performance warnings |
+| Login | Mobile | ![screenshot](documentation/lighthouse/mobile/light-login.png) | Some minor performance warnings |
+| Sign Up | Mobile | ![screenshot](documentation/lighthouse/mobile/light-signup.png) | Some minor performance warnings |
+| 404 | Mobile | ![screenshot](documentation/lighthouse/mobile/light-404.png) | Some minor performance warnings |
+
 
 
 ### Booking App Templates - Desktop Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-home.png) | Some minor performance warnings |
-| About | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-about.png) | Some minor performance warnings |
-| News | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-news.png) | Warning about link text (ignored as link is a Bootstrap button) |
-| Contact | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-contact.png) | No warnings |
-| Base | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-base.png) | No warnings |
-| Post-Detail | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-post-detail.png) | No warnings |
-| Post-Form | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-post-form.png) | No warnings |
-| Post-Confirm-Delete | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-post-confirm-delete.png) | No warnings |
-| Custom Error 400 | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-400.png) | No warnings |
-| Custom Error 403 | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-403.png) | No warnings |
-| Custom Error 404 | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-404.png) | No warnings |
-| Custom Error 500 | Desktop | ![screenshot](documentation/lighthouse/website/desktop/website-desktop-500.png) | No warnings |
+| Home | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-home.png) | Some minor performance warnings |
+| About | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-about.png) | Some minor performance warnings |
+| Itineraries | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-itineraries.png) | Warning about link text (ignored as link is a Bootstrap button) |
+| Itinerary Detail | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-itinerary-detail.png) | Some minor performance warnings |
+| Contact | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-contact.png) | Some minor performance warnings |
+| Profile | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-profile.png) | Some minor performance warnings |
+| Login | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-login.png) | Some minor performance warnings |
+| Sign Up | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-signup.png) | Some minor performance warnings |
+| 404 | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-404.png) | Some minor performance warnings |
 
 
 ## Defensive Programming

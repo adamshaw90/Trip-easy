@@ -53,22 +53,22 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
 #### Validation For Trip-Easy App
-| File | CI URL | Screenshot | Notes |
-| --- | --- | --- | --- |
-| asgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/tripeasy_asgi.png) | Pass: No Errors |
-| settings.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/tripeasy_settings.png) | Pass: No Errors |
-| urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/tripeasy_urls.png) | Pass: No Errors |
-| wsgi.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/tripeasy/tripeasy_wsgi.png) | Pass: No Errors |
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| asgi.py | ![screenshot](documentation/validation/python/tripeasy/tripeasy_asgi.png) | Pass: No Errors |
+| settings.py | ![screenshot](documentation/validation/python/tripeasy/tripeasy_settings.png) | Pass: No Errors |
+| urls.py | ![screenshot](documentation/validation/python/tripeasy/tripeasy_urls.png) | Pass: No Errors |
+| wsgi.py | ![screenshot](documentation/validation/python/tripeasy/tripeasy_wsgi.png) | Pass: No Errors |
 
 #### Validation For Booking App
-| File | CI URL | Screenshot | Notes |
-| --- | --- | --- | --- |
-| admin.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_apps.png) | Pass: No Errors |
-| forms.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_forms.png) | Pass: No Errors |
-| models.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_models.png) | Pass: No Errors |
-| urls.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI]() | ![screenshot](documentation/validation/python/booking/booking_views.png) | Pass: No Errors |
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| admin.py | ![screenshot](documentation/validation/python/booking/booking_admin.png) | Pass: No Errors |
+| apps.py | ![screenshot](documentation/validation/python/booking/booking_apps.png) | Pass: No Errors |
+| forms.py | ![screenshot](documentation/validation/python/booking/booking_forms.png) | Pass: No Errors |
+| models.py | ![screenshot](documentation/validation/python/booking/booking_models.png) | Pass: No Errors |
+| urls.py | ![screenshot](documentation/validation/python/booking/booking_urls.png) | Pass: No Errors |
+| views.py | ![screenshot](documentation/validation/python/booking/booking_views.png) | Pass: No Errors |
 
 
 ## Browser Compatibility
@@ -78,10 +78,9 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 | Browser | Screenshot | Notes |
 | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browsers/chrome.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browsers/firefox.png) | Works as expected |
-| Edge | ![screenshot](documentation/browsers/edge.png) | No smooth-scrolling |
-| Safari | ![screenshot](documentation/browsers/safari.png) | Works as expected |
+| Chrome | ![screenshot](documentation/browsers/browser_chrome.png) | Works as expected |
+| Firefox | ![screenshot](documentation/browsers/browser_firefox.png) | Works as expected |
+| Edge | ![screenshot](documentation/browsers/browser_edge.png) | Works as expected |
 
 
 ## Responsiveness

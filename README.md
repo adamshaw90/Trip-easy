@@ -56,7 +56,7 @@ All user stories can be found in a linked GitHub project [here](https://github.c
     - Contact Page. Users can see contact information for Trip-Easy, including 
     a contact email address and location information. An embedded Google Maps widget allows users to see the business's exact location. There is also a form that can be filled out by users.
 
-![screenshot](documentation/features/sitepages/contactpage.png)
+![screenshot](documentation/features/site-pages/contactpage.png)
 
 - **Sign-up Page**
 

@@ -2,7 +2,6 @@
 
 Return back to the [README.md](README.md) file.
 
-
 ## Code Validation
 
 ### HTML
@@ -29,14 +28,11 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Profile | ![screenshot](documentation/validation/html/html-validation-profile.png) | Pass: No Errors, 1 Warning : HTML is compliant, external JS script warning. |
 | Sign Up | ![screenshot](documentation/validation/html/html-validation-signup.png) | Pass: No Errors |
 
-
 ### CSS
 
-I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files. Which passed with no errors.
 
-| File | Screenshot | Notes |
-| --- | --- | --- | --- |
-| style.css | ![screenshot](documentation/validation/css/css_validation.png) | Pass: No Errors |
+![screenshot](documentation/validation/css/css_validation.png)
 
 ### JavaScript
 
@@ -45,8 +41,6 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | File | Screenshot | Notes |
 | --- | --- | --- |
 | modal-handler.js | ![screenshot](documentation//validation/js/js_validation.png) | Pass: No Errors - 1 'Undefined' message as bootstrap link is in the base.html file. |
-
-
 
 ### Python
 
@@ -70,9 +64,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | urls.py | ![screenshot](documentation/validation/python/booking/booking_urls.png) | Pass: No Errors |
 | views.py | ![screenshot](documentation/validation/python/booking/booking_views.png) | Pass: No Errors |
 
-
 ## Browser Compatibility
-
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
@@ -81,7 +73,6 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Chrome | ![screenshot](documentation/browsers/browser_chrome.png) | Works as expected |
 | Firefox | ![screenshot](documentation/browsers/browser_firefox.png) | Works as expected |
 | Edge | ![screenshot](documentation/browsers/browser_edge.png) | Works as expected |
-
 
 ## Responsiveness
 
@@ -93,7 +84,6 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Tablet (DevTools) | ![screenshot](documentation/responsiveness/tablet.png) | Works as expected |
 | Desktop | ![screenshot](documentation/responsiveness/desktop.png) | Works as expected |
 
-
 ## Lighthouse Audit
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
@@ -103,7 +93,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | --- | --- | --- | --- |
 | Home | Mobile | ![screenshot](documentation/lighthouse/mobile/light-home.png) | Some minor performance warnings |
 | About | Mobile | ![screenshot](documentation/lighthouse/mobile/light-about.png) | Some minor performance warnings |
-| Itineraries | Mobile | ![screenshot](documentation/lighthouse/mobile/light-itineraries.png) | Warning about link text (ignored as link is a Bootstrap button) |
+| Itineraries | Mobile | ![screenshot](documentation/lighthouse/mobile/light-itineraries.png) | Some minor performance warnings |
 | Itinerary Detail | Mobile | ![screenshot](documentation/lighthouse/mobile/light-itinerary-detail.png) | Some minor performance warnings |
 | Contact | Mobile | ![screenshot](documentation/lighthouse/mobile/light-contact.png) | Some minor performance warnings |
 | Profile | Mobile | ![screenshot](documentation/lighthouse/mobile/light-profile.png) | Some minor performance warnings |
@@ -111,14 +101,12 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Sign Up | Mobile | ![screenshot](documentation/lighthouse/mobile/light-signup.png) | Some minor performance warnings |
 | 404 | Mobile | ![screenshot](documentation/lighthouse/mobile/light-404.png) | Some minor performance warnings |
 
-
-
 ### Booking App Templates - Desktop Testing
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-home.png) | Some minor performance warnings |
 | About | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-about.png) | Some minor performance warnings |
-| Itineraries | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-itineraries.png) | Warning about link text (ignored as link is a Bootstrap button) |
+| Itineraries | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-itineraries.png) | Some minor performance warnings) |
 | Itinerary Detail | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-itinerary-detail.png) | Some minor performance warnings |
 | Contact | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-contact.png) | Some minor performance warnings |
 | Profile | Desktop | ![screenshot](documentation/lighthouse/desktop/light-desk-profile.png) | Some minor performance warnings |
@@ -211,7 +199,6 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## Bugs
 
-
 - Navbar items wouldn't align on right.
 
     - To fix this, I had to remove css for header display:flex for them to align to the right.
@@ -240,11 +227,13 @@ Defensive programming was manually tested with the below user acceptance testing
 
     - To fix this I had to set the .homepage height to 100vh.
 
+- Extra zeros being displayed on prices.
 
+    - To fix this, I had to add a float format so new code is: <p><strong>Price:</strong> £{{ itinerary.price|floatformat:"0" }}pp</p> anywhere there was a price.
 
-**Open Issues**
+- Too many itineraries showing in the features section.
 
-Any open issues can be tracked [here](https://github.com/LewisMDillon/bushy-park-tennis-club-ld/issues). These are the "Won't Have's" for this project that, for a variety of reasons, will not be included in this projct submission. These may be revisited and added in the future.
+    - To fix this, I had to add 'slice' to {% for itinerary in itineraries|slice:":6" %} in the home.html file so that it will now only display 6.
 
 ## Unfixed Bugs
 

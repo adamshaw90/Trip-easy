@@ -19,7 +19,8 @@ def about(request):
 
 def itineraries(request):
     itineraries = Itinerary.objects.all()
-    return render(request, 'booking/itineraries.html', {'itineraries': itineraries})    
+    return render(request, 'booking/itineraries.html',
+                  {'itineraries': itineraries})
 
 
 def sign_up(request):
@@ -57,13 +58,13 @@ def confirm_logout_view(request):
         logout(request)
         messages.success(request, "You have been logged out.")
         return redirect('home')
-    return render(request, 'booking/confirm_logout.html')    
+    return render(request, 'booking/confirm_logout.html')
 
 
 @login_required
 def profile_view(request):
     profile = request.user.profile
-    
+
     user_bookings = Booking.objects.filter(user=request.user)
     return render(request, 'booking/profile.html', {
         'profile': profile,
@@ -79,7 +80,7 @@ def cancel_booking(request, pk):
         messages.success(request, "Your booking has been canceled.")
         return redirect('profile')
     else:
-        
+
         return redirect('profile')
 
 
@@ -88,15 +89,16 @@ def confirm_cancel_booking(request, booking_id):
     """Ask the user to confirm before canceling their booking."""
     # Ensure only the owner (or admin) can cancel this booking
     booking = get_object_or_404(Booking, pk=booking_id, user=request.user)
-    
+
     if request.method == 'POST':
         # User confirmed cancellation
-        booking.delete() 
+        booking.delete()
         messages.success(request, "Booking canceled successfully.")
         return redirect('profile')
-    
+
     # For GET requests, show the confirmation template
-    return render(request, 'booking/confirm_cancel_booking.html', {'booking': booking})
+    return render(request, 'booking/confirm_cancel_booking.html',
+                  {'booking': booking})
 
 
 @login_required
@@ -112,7 +114,7 @@ def profile_update(request):
         form = ProfileForm(instance=profile, user=request.user)
     return render(request, 'booking/profile_edit.html', {'form': form})
 
-    
+
 @login_required
 def delete_profile(request):
     if request.method == 'POST':
@@ -140,12 +142,14 @@ def itinerary_create(request):
 
 def itinerary_list(request):
     itineraries = Itinerary.objects.all()
-    return render(request, 'booking/itinerary_list.html', {'itineraries': itineraries})
+    return render(request, 'booking/itinerary_list.html',
+                  {'itineraries': itineraries})
 
 
 def itinerary_detail(request, pk):
     itinerary = get_object_or_404(Itinerary, pk=pk)
-    return render(request, 'booking/itinerary_detail.html', {'itinerary': itinerary})
+    return render(request, 'booking/itinerary_detail.html',
+                  {'itinerary': itinerary})
 
 
 @login_required
@@ -175,7 +179,8 @@ def itinerary_delete(request, pk):
         itinerary.delete()
         messages.success(request, "Itinerary deleted.")
         return redirect('home')
-    return render(request, 'booking/itinerary_confirm_delete.html', {'itinerary': itinerary})
+    return render(request, 'booking/itinerary_confirm_delete.html',
+                  {'itinerary': itinerary})
 
 
 @login_required
@@ -270,7 +275,8 @@ def delete_review(request, review_id):
         messages.success(request, "Review deleted successfully.")
         return redirect('itinerary_detail', pk=itinerary_id)
 
-    return render(request, 'booking/confirm_delete_review.html', {'review': review})
+    return render(request, 'booking/confirm_delete_review.html',
+                  {'review': review})
 
 
 def custom_404(request, exception):
@@ -294,7 +300,7 @@ def contact_view(request):
             )
 
             messages.success(request, "Thank you for contacting us! Your request has been received.")
-            return redirect('contact')  
+            return redirect('contact')
     else:
         form = ContactForm()
 

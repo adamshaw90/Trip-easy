@@ -50,7 +50,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | File | Screenshot | Notes |
 | --- | --- | --- |
 | asgi.py | ![screenshot](documentation/validation/python/tripeasy/tripeasy_asgi.png) | Pass: No Errors |
-| settings.py | ![screenshot](documentation/validation/python/tripeasy/tripeasy_settings.png) | Pass: No Errors |
+| settings.py | ![screenshot](documentation/validation/python/tripeasy/tripeasy_settings.png) | AUTH_PASSWORD_VALIDATORS lines too long  |
 | urls.py | ![screenshot](documentation/validation/python/tripeasy/tripeasy_urls.png) | Pass: No Errors |
 | wsgi.py | ![screenshot](documentation/validation/python/tripeasy/tripeasy_wsgi.png) | Pass: No Errors |
 

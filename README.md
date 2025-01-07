@@ -173,6 +173,42 @@ All user stories can be found in a linked GitHub project [here](https://github.c
     - Front end itinerary creation.
     - Front end edit and delete functions.
 
+## Wireframes
+
+- Balsamiq was used to create the wireframes.
+
+Home page:
+
+![home-wire](documentation/wireframes/home-wire.png)
+
+About page:
+
+![about-wire](documentation/wireframes/about-wire.png)
+
+Itineraries page:
+
+![hire-page](documentation/wireframes/itin-wire.png)
+
+Itinerary Details page:
+
+![gallery-wire](documentation/wireframes/detail-wire.png)
+
+Contact page:
+
+![contact-wire](documentation/wireframes/contact-wire.png)
+
+Login page:
+
+![contact-wire](documentation/wireframes/login-wire.png)
+
+Action Confirmation page:
+
+![contact-wire](documentation/wireframes/action-wire.png)
+
+Profile page:
+
+![contact-wire](documentation/wireframes/profile-wire.png)
+
 
 ## Tools & Technologies Used
 

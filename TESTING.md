@@ -140,9 +140,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | Itinerary Details Page | | | | |
 | | Click on Book Now button | Redirect to booking confirmation page | Pass | |
 | | Click on back button | Redirect to reservation list page | Pass | |
-| | Click on back button | Redirect to reservation list page | Pass | |
-| | Click on back button | Redirect to reservation list page | Pass | |
-| | Click on back button | Redirect to reservation list page | Pass | |
 | Booking Confirmation Page | | | | |
 | | Click on Confirm Booking button | Redirect to Profile confirmation page | Pass | |
 | | Click on Cancel button | Redirect to itinerary page | Pass | |

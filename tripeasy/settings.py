@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-adamshaw90-tripeasy-sazwp0empwc.ws.codeinstitute-ide.net', '.https://trip-easy-d2ed1842c9a5.herokuapp.com']
+ALLOWED_HOSTS = ['8000-adamshaw90-tripeasy-sazwp0empwc.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
